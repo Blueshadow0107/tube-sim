@@ -4,6 +4,8 @@ London Tube journey planner + all-lines challenge solver. Flask backend, vanilla
 
 **Network:** 11 tube lines plus optional Overground (6 lines), DLR, and Elizabeth line — 420 hub-merged stations in the current snapshot. Non-tube lines are off by default; toggle them under *Map layers*. The River Thames (real OSM geometry, cached in `data/thames.json`) renders beneath the network like on the tube map, with its own toggle.
 
+**Time travel:** a slider along the bottom of the map replays the network from 1863 to 2025 (play, speed, station/line/km counts, an "Opened:" ticker). Open `/#1971-07` to jump to a month. Journeys and the challenge still use today's network.
+
 ## Run
 
 ```sh
@@ -49,3 +51,10 @@ The solver is a beam search over `(station, covered-lines bitmask, stopped-stati
 - Hub merging follows TfL's own station grouping; a few walking interchanges TfL keeps separate (e.g. Bank ↔ Monument) stay separate nodes.
 - TfL treats some same-name pairs (Edgware Road tube stations) as separate hubs; they are not merged.
 - The 19-line run is heuristic — raise think time for better results.
+
+Rebuild the history (Wikidata is rate-limited and sometimes slow, so the fetch retries):
+
+```sh
+./.venv/bin/python fetch_history.py    # data/wikidata_london_rail.json
+./.venv/bin/python build_history.py    # data/history.json + data/line_fixes_review.md
+```
