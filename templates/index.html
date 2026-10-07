@@ -4,11 +4,13 @@
   <meta charset="utf-8">
   <title>Tube Sim</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/static/style.css?v=5">
+  <link rel="stylesheet" href="/static/style.css?v=7">
 </head>
 <body>
   <aside id="panel">
     <h1>Tube Sim</h1>
+
+    <p id="tl-note" class="hint" hidden>Showing the network as it was. Journeys and the challenge still use today's network, so slide back to today to match them.</p>
 
     <div id="mode-tabs">
       <button class="tab active" data-mode="journey">Journey</button>
@@ -75,8 +77,27 @@
         <g id="markers"></g>
       </g>
     </svg>
+
+    <div id="timebar" hidden>
+      <div class="tl-top">
+        <button id="tl-play" type="button" aria-label="Play through the years">▶</button>
+        <div id="tl-date"><b id="tl-year">2025</b> <span id="tl-month">Dec</span></div>
+        <div id="tl-stats"></div>
+        <label class="tl-speed">Speed
+          <select id="tl-speed">
+            <option value="2">2 years/s</option>
+            <option value="5" selected>5 years/s</option>
+            <option value="12">12 years/s</option>
+          </select>
+        </label>
+        <button id="tl-now" type="button" title="Back to today">Today</button>
+      </div>
+      <input id="tl-slider" type="range" min="0" max="1955" step="1" value="1955" aria-label="Date">
+      <div id="tl-ticks" aria-hidden="true"></div>
+      <div id="tl-news" aria-live="polite"></div>
+    </div>
   </main>
 
-  <script src="/static/map.js?v=5"></script>
+  <script src="/static/map.js?v=7"></script>
 </body>
 </html>

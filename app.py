@@ -3,6 +3,7 @@
 Endpoints:
   GET  /                      map UI
   GET  /api/state             all stations + line edges for rendering
+  GET  /api/history           link lifetimes + station service dates (time slider)
   GET  /api/route?from=&to=   fastest route between two station ids
   POST /api/challenge/solve   all-lines challenge solver (JSON body:
                               objective hops|km|balanced,
@@ -20,6 +21,7 @@ app = Flask(__name__)
 graph = TubeGraph()
 solver = ChallengeSolver(graph)
 RIVER_PATH = Path(__file__).parent / "data" / "thames.json"
+HISTORY_PATH = Path(__file__).parent / "data" / "history.json"
 
 
 @app.get("/")
@@ -30,6 +32,14 @@ def index():
 @app.get("/api/state")
 def state():
     return jsonify(graph.serialize_state())
+
+
+@app.get("/api/history")
+def history():
+    """Link lifetimes + station service dates (built by build_history.py) for the time slider."""
+    if not HISTORY_PATH.exists():
+        return jsonify({"error": "history data missing — run fetch_history.py then build_history.py"}), 404
+    return app.response_class(HISTORY_PATH.read_text(), mimetype="application/json")
 
 
 @app.get("/api/river")

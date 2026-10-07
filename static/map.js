@@ -36,14 +36,17 @@ function projectAll() {
     s.x = p.x;
     s.y = p.y;
   }
-  const xs = STATE.stations.map(s => s.x);
-  const ys = STATE.stations.map(s => s.y);
-  const pad = 800;
+  // frame Greater London (zones 1-6); the far-out Elizabeth/Metropolitan stations stay reachable by panning
+  const core = STATE.stations.filter(s => { const z = parseInt(s.zone, 10); return z >= 1 && z <= 6; });
+  const framed = core.length > 50 ? core : STATE.stations;
+  const xs = framed.map(s => s.x);
+  const ys = framed.map(s => s.y);
+  const pad = 1500;
   return {
     x: Math.min(...xs) - pad,
     y: Math.min(...ys) - pad,
     w: Math.max(...xs) - Math.min(...xs) + 2 * pad,
-    h: Math.max(...ys) - Math.min(...ys) + 2 * pad,
+    h: Math.max(...ys) - Math.min(...ys) + 2 * pad + 4500, // extra room at the bottom for the time bar
   };
 }
 
@@ -61,7 +64,7 @@ function applyViewBox() {
 // shrink as you zoom in, so clustered stations stay delineated dots
 function updateMarkerSizes() {
   if (!STATE) return;
-  const scale = vb.w / svg.clientWidth; // viewBox units per CSS px
+  const scale = vb.w / svgWidth(); // viewBox units per CSS px
   // Fixed viewBox radius: on screen dots shrink at the same rate as the
   // lines when zooming out. Once zoomed in past rFixed/rPx, the screen-size
   // floor takes over so dense clusters stay delineated. Fixed radii are
@@ -94,6 +97,9 @@ function svgPoint(evt) {
 // ---- rendering -----------------------------------------------------------
 
 const SVGNS = "http://www.w3.org/2000/svg";
+
+// on-screen width of the map in CSS px (clientWidth is unreliable on an outer <svg>)
+const svgWidth = () => svg.getBoundingClientRect().width || 1;
 
 function el(tag, attrs = {}) {
   const e = document.createElementNS(SVGNS, tag);
@@ -145,7 +151,9 @@ function applyLayers() {
   });
   document.getElementById("river").style.display = riverVisible ? "" : "none";
   for (const s of STATE.stations) {
-    const vis = s.lines.some(lid => layerVisible[LINE_MODE.get(lid)]);
+    // with history loaded, only the lines serving the station at the chosen date count
+    const lines = s.activeLines ? [...s.activeLines] : s.lines;
+    const vis = lines.some(lid => layerVisible[LINE_MODE.get(lid)]);
     s.el.style.display = vis ? "" : "none";
   }
 }
@@ -444,6 +452,9 @@ document.getElementById("station-search").addEventListener("input", e => {
   }
 });
 
+// marker sizes depend on the map's on-screen width, so refresh them whenever it changes (window resize, late layout)
+new ResizeObserver(() => { if (STATE && vb) applyViewBox(); }).observe(svg);
+
 // pan
 let drag = null;
 svg.addEventListener("mousedown", e => {
@@ -453,7 +464,7 @@ svg.addEventListener("mousedown", e => {
 window.addEventListener("mouseup", () => { drag = null; svg.classList.remove("dragging"); });
 svg.addEventListener("mousemove", e => {
   if (!drag) return;
-  const scale = vb.w / svg.clientWidth;
+  const scale = vb.w / svgWidth();
   vb.x -= (e.clientX - drag.x) * scale;
   vb.y -= (e.clientY - drag.y) * scale;
   drag = { x: e.clientX, y: e.clientY };
@@ -471,6 +482,155 @@ svg.addEventListener("wheel", e => {
   applyViewBox();
 }, { passive: false });
 
+// ---- time travel -----------------------------------------------------------
+// data/history.json (build_history.py): every link with the dates it existed, every station with the dates a line served it.
+// The slider moves in months from Jan 1863; a month's date is its LAST day, so everything that opened in it is included.
+
+let HIST = null;
+let curISO = "9999-12-31";
+let playing = false, playRaf = 0, playMonth = 0;
+const START_YEAR = 1863, MONTHS = (2026 - START_YEAR) * 12; // slider 0 .. MONTHS-1
+const MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+function monthToISO(m) {
+  const y = START_YEAR + Math.floor(m / 12), mo = m % 12;
+  const last = new Date(Date.UTC(y, mo + 1, 0)).getUTCDate();
+  return `${y}-${String(mo + 1).padStart(2, "0")}-${String(last).padStart(2, "0")}`;
+}
+
+function haversineKm(la1, lo1, la2, lo2) {
+  const r = Math.PI / 180, dp = (la2 - la1) * r, dl = (lo2 - lo1) * r;
+  const h = Math.sin(dp / 2) ** 2 + Math.cos(la1 * r) * Math.cos(la2 * r) * Math.sin(dl / 2) ** 2;
+  return 12742 * Math.asin(Math.sqrt(h));
+}
+
+function renderHistory() {
+  const gEdges = document.getElementById("edges");
+  gEdges.replaceChildren();
+  const groups = new Map();
+  for (const l of STATE.lines) {
+    const g = el("g", { "data-line": l.id, "data-mode": l.mode });
+    groups.set(l.id, g);
+    gEdges.appendChild(g);
+  }
+  const lineById = new Map(STATE.lines.map(l => [l.id, l]));
+  for (const lk of HIST.links) {
+    const sa = byId.get(lk.a), sb = byId.get(lk.b), line = lineById.get(lk.line);
+    lk.el = el("line", {
+      class: "edge",
+      x1: sa.x, y1: sa.y, x2: sb.x, y2: sb.y,
+      stroke: line.color,
+      "stroke-width": line.mode === "tube" ? 150 : 130,
+    });
+    lk.km = haversineKm(sa.lat, sa.lon, sb.lat, sb.lon);
+    groups.get(lk.line).appendChild(lk.el);
+  }
+  for (const s of STATE.stations) {
+    const h = HIST.stations[s.id];
+    s.first = h ? h.first_served : null;
+  }
+  // axis labels under the slider
+  const ticks = document.getElementById("tl-ticks");
+  ticks.replaceChildren();
+  for (const y of [1863, 1900, 1950, 2000, 2025]) {
+    const t = document.createElement("span");
+    t.textContent = y;
+    t.style.left = `${(((y - START_YEAR) * 12) / (MONTHS - 1)) * 100}%`;
+    ticks.appendChild(t);
+  }
+  document.getElementById("timebar").hidden = false;
+  const fromHash = /^#(\d{4})(?:-(\d{1,2}))?$/.exec(location.hash);
+  const m = fromHash ? Math.min(MONTHS - 1, Math.max(0, (+fromHash[1] - START_YEAR) * 12 + (fromHash[2] ? +fromHash[2] - 1 : 11))) : MONTHS - 1;
+  setMonth(m);
+}
+
+function setMonth(m, prevM = null) {
+  document.getElementById("tl-slider").value = m;
+  applyDate(monthToISO(m), prevM == null ? null : monthToISO(prevM));
+  const y = START_YEAR + Math.floor(m / 12);
+  document.getElementById("tl-year").textContent = y;
+  document.getElementById("tl-month").textContent = MON[m % 12];
+  document.getElementById("tl-note").hidden = m >= MONTHS - 1;
+}
+
+function applyDate(iso, prevISO) {
+  curISO = iso;
+  const act = new Map(); // station id -> Set of line ids running on it at this date
+  let km = 0;
+  const lines = new Set();
+  for (const lk of HIST.links) {
+    const on = lk.from <= iso && (lk.to === null || iso < lk.to);
+    lk.el.style.display = on ? "" : "none";
+    if (!on) continue;
+    for (const id of [lk.a, lk.b]) {
+      if (!act.has(id)) act.set(id, new Set());
+      act.get(id).add(lk.line);
+    }
+    if (layerVisible[LINE_MODE.get(lk.line)]) { km += lk.km; lines.add(lk.line); }
+  }
+  for (const s of STATE.stations) {
+    s.activeLines = act.get(s.id) || new Set();
+    s.interchange = s.activeLines.size > 1;
+    s.rPx = s.interchange ? 4.2 : 2.6;
+    s.rFixed = s.interchange ? 75 : 55;
+    s.el.classList.toggle("interchange", s.interchange);
+  }
+  applyLayers();
+  updateLod();
+  updateMarkerSizes();
+  const shown = STATE.stations.filter(s => s.el.style.display !== "none").length;
+  document.getElementById("tl-stats").innerHTML =
+    `<b>${shown}</b> stations · <b>${lines.size}</b> lines · <b>${Math.round(km)}</b> km of track`;
+  // what just opened (since the previous frame), for the ticker
+  const news = document.getElementById("tl-news");
+  if (prevISO && prevISO < iso) {
+    const fresh = STATE.stations.filter(s => s.first && s.first > prevISO && s.first <= iso && s.el.style.display !== "none");
+    if (fresh.length) {
+      const names = fresh.slice(0, 4).map(s => s.name.replace(/ (Underground|DLR|Rail) Station$/, ""));
+      news.innerHTML = `<i>Opened:</i> ${names.join(", ")}${fresh.length > 4 ? ` <i>+${fresh.length - 4} more</i>` : ""}`;
+    }
+  } else if (!prevISO) {
+    news.textContent = "";
+  }
+}
+
+function stopPlay() {
+  playing = false;
+  cancelAnimationFrame(playRaf);
+  document.getElementById("tl-play").textContent = "▶";
+}
+
+function startPlay() {
+  const slider = document.getElementById("tl-slider");
+  if (+slider.value >= MONTHS - 1) slider.value = 0;
+  playMonth = +slider.value;
+  playing = true;
+  document.getElementById("tl-play").textContent = "❚❚";
+  let last = performance.now(), shownM = Math.floor(playMonth);
+  const tick = now => {
+    if (!playing) return;
+    const dt = Math.min(0.1, (now - last) / 1000);
+    last = now;
+    playMonth += dt * Number(document.getElementById("tl-speed").value) * 12;
+    const m = Math.min(MONTHS - 1, Math.floor(playMonth));
+    if (m !== shownM) { setMonth(m, shownM); shownM = m; }
+    if (m >= MONTHS - 1) return stopPlay();
+    playRaf = requestAnimationFrame(tick);
+  };
+  playRaf = requestAnimationFrame(tick);
+}
+
+document.getElementById("tl-play").addEventListener("click", () => (playing ? stopPlay() : startPlay()));
+document.getElementById("tl-slider").addEventListener("input", e => { stopPlay(); setMonth(+e.target.value); });
+document.getElementById("tl-now").addEventListener("click", () => { stopPlay(); setMonth(MONTHS - 1); });
+
+function loadHistory() {
+  fetch("/api/history")
+    .then(r => (r.ok ? r.json() : null))
+    .then(h => { if (h && h.links) { HIST = h; renderHistory(); } })
+    .catch(() => {});
+}
+
 // ---- boot -----------------------------------------------------------------
 
 fetch("/api/state").then(r => r.json()).then(data => {
@@ -482,4 +642,5 @@ fetch("/api/state").then(r => r.json()).then(data => {
   renderMap();
   updateCoverCount();
   fetch("/api/river").then(r => r.json()).then(d => renderRiver(d.parts));
+  loadHistory();
 });
