@@ -1,0 +1,6425 @@
+{
+ "fetched_at": "2026-09-25T19:23:09.924665+00:00",
+ "modes": [
+  "tube",
+  "overground",
+  "dlr",
+  "elizabeth-line"
+ ],
+ "speeds_kmh": {
+  "tube": 32.0,
+  "overground": 48.0,
+  "dlr": 45.0,
+  "elizabeth-line": 70.0
+ },
+ "lines": [
+  {
+   "id": "bakerloo",
+   "name": "Bakerloo",
+   "color": "#B36305",
+   "mode": "tube",
+   "edges": [
+    [
+     "940GZZLUBST",
+     "940GZZLURGP"
+    ],
+    [
+     "940GZZLUBST",
+     "HUBMYB"
+    ],
+    [
+     "940GZZLUEMB",
+     "HUBCHX"
+    ],
+    [
+     "940GZZLUEMB",
+     "HUBWAT"
+    ],
+    [
+     "940GZZLUERB",
+     "HUBMYB"
+    ],
+    [
+     "940GZZLUERB",
+     "HUBPAD"
+    ],
+    [
+     "940GZZLUKPK",
+     "940GZZLUMVL"
+    ],
+    [
+     "940GZZLUKPK",
+     "HUBQPW"
+    ],
+    [
+     "940GZZLULBN",
+     "HUBEPH"
+    ],
+    [
+     "940GZZLULBN",
+     "HUBWAT"
+    ],
+    [
+     "940GZZLUMVL",
+     "940GZZLUWKA"
+    ],
+    [
+     "940GZZLUOXC",
+     "940GZZLUPCC"
+    ],
+    [
+     "940GZZLUOXC",
+     "940GZZLURGP"
+    ],
+    [
+     "940GZZLUPCC",
+     "HUBCHX"
+    ],
+    [
+     "940GZZLUWKA",
+     "HUBPAD"
+    ],
+    [
+     "HUBHDN",
+     "HUBSBP"
+    ],
+    [
+     "HUBHDN",
+     "HUBWIJ"
+    ],
+    [
+     "HUBHRW",
+     "HUBKNT"
+    ],
+    [
+     "HUBKNL",
+     "HUBQPW"
+    ],
+    [
+     "HUBKNL",
+     "HUBWIJ"
+    ],
+    [
+     "HUBKNT",
+     "HUBSOK"
+    ],
+    [
+     "HUBNWB",
+     "HUBSOK"
+    ],
+    [
+     "HUBNWB",
+     "HUBWMB"
+    ],
+    [
+     "HUBSBP",
+     "HUBWMB"
+    ]
+   ]
+  },
+  {
+   "id": "central",
+   "name": "Central",
+   "color": "#E32017",
+   "mode": "tube",
+   "edges": [
+    [
+     "940GZZLUBKE",
+     "940GZZLUFLP"
+    ],
+    [
+     "940GZZLUBKE",
+     "940GZZLUNBP"
+    ],
+    [
+     "940GZZLUBKH",
+     "940GZZLULGN"
+    ],
+    [
+     "940GZZLUBKH",
+     "940GZZLUWOF"
+    ],
+    [
+     "940GZZLUBLG",
+     "940GZZLUMED"
+    ],
+    [
+     "940GZZLUBLG",
+     "HUBLST"
+    ],
+    [
+     "940GZZLUCHL",
+     "940GZZLUHBN"
+    ],
+    [
+     "940GZZLUCHL",
+     "940GZZLUSPU"
+    ],
+    [
+     "940GZZLUCWL",
+     "940GZZLUGGH"
+    ],
+    [
+     "940GZZLUCWL",
+     "940GZZLURVY"
+    ],
+    [
+     "940GZZLUDBN",
+     "940GZZLULGN"
+    ],
+    [
+     "940GZZLUDBN",
+     "940GZZLUTHB"
+    ],
+    [
+     "940GZZLUEAN",
+     "940GZZLUNAN"
+    ],
+    [
+     "940GZZLUEAN",
+     "940GZZLUWCY"
+    ],
+    [
+     "940GZZLUEPG",
+     "940GZZLUTHB"
+    ],
+    [
+     "940GZZLUFLP",
+     "940GZZLUHLT"
+    ],
+    [
+     "940GZZLUGGH",
+     "940GZZLUHLT"
+    ],
+    [
+     "940GZZLUGTH",
+     "940GZZLUNBP"
+    ],
+    [
+     "940GZZLUGTH",
+     "940GZZLURBG"
+    ],
+    [
+     "940GZZLUHBN",
+     "HUBTCR"
+    ],
+    [
+     "940GZZLUHGR",
+     "940GZZLUNAN"
+    ],
+    [
+     "940GZZLUHGR",
+     "940GZZLUPVL"
+    ],
+    [
+     "940GZZLUHPK",
+     "940GZZLUNHG"
+    ],
+    [
+     "940GZZLUHPK",
+     "HUBSPB"
+    ],
+    [
+     "940GZZLULGT",
+     "940GZZLUMBA"
+    ],
+    [
+     "940GZZLULGT",
+     "940GZZLUQWY"
+    ],
+    [
+     "940GZZLULYN",
+     "940GZZLULYS"
+    ],
+    [
+     "940GZZLULYN",
+     "HUBSRA"
+    ],
+    [
+     "940GZZLULYS",
+     "940GZZLUSNB"
+    ],
+    [
+     "940GZZLULYS",
+     "940GZZLUWSD"
+    ],
+    [
+     "940GZZLUMBA",
+     "HUBBDS"
+    ],
+    [
+     "940GZZLUMED",
+     "HUBSRA"
+    ],
+    [
+     "940GZZLUNAN",
+     "940GZZLUWTA"
+    ],
+    [
+     "940GZZLUNHG",
+     "940GZZLUQWY"
+    ],
+    [
+     "940GZZLUNHT",
+     "HUBGFD"
+    ],
+    [
+     "940GZZLUNHT",
+     "HUBSRU"
+    ],
+    [
+     "940GZZLUOXC",
+     "HUBBDS"
+    ],
+    [
+     "940GZZLUOXC",
+     "HUBTCR"
+    ],
+    [
+     "940GZZLUPVL",
+     "HUBGFD"
+    ],
+    [
+     "940GZZLURBG",
+     "940GZZLUWSD"
+    ],
+    [
+     "940GZZLURSG",
+     "HUBSRU"
+    ],
+    [
+     "940GZZLURSG",
+     "HUBWRU"
+    ],
+    [
+     "940GZZLURVY",
+     "940GZZLUWOF"
+    ],
+    [
+     "940GZZLUSNB",
+     "940GZZLUSWF"
+    ],
+    [
+     "940GZZLUSPU",
+     "HUBBAN"
+    ],
+    [
+     "940GZZLUSWF",
+     "940GZZLUWOF"
+    ],
+    [
+     "940GZZLUWCY",
+     "HUBSPB"
+    ],
+    [
+     "940GZZLUWTA",
+     "HUBEAL"
+    ],
+    [
+     "HUBBAN",
+     "HUBLST"
+    ]
+   ]
+  },
+  {
+   "id": "circle",
+   "name": "Circle",
+   "color": "#FFD300",
+   "mode": "tube",
+   "edges": [
+    [
+     "940GZZLUALD",
+     "940GZZLUTWH"
+    ],
+    [
+     "940GZZLUALD",
+     "HUBLST"
+    ],
+    [
+     "940GZZLUBBN",
+     "HUBZFD"
+    ],
+    [
+     "940GZZLUBBN",
+     "HUBZMG"
+    ],
+    [
+     "940GZZLUBST",
+     "940GZZLUERC"
+    ],
+    [
+     "940GZZLUBST",
+     "940GZZLUGPS"
+    ],
+    [
+     "940GZZLUBWT",
+     "940GZZLUNHG"
+    ],
+    [
+     "940GZZLUBWT",
+     "HUBPAD"
+    ],
+    [
+     "940GZZLUEMB",
+     "940GZZLUTMP"
+    ],
+    [
+     "940GZZLUEMB",
+     "HUBWSM"
+    ],
+    [
+     "940GZZLUERC",
+     "HUBPAD"
+    ],
+    [
+     "940GZZLUESQ",
+     "940GZZLUGPS"
+    ],
+    [
+     "940GZZLUESQ",
+     "HUBKGX"
+    ],
+    [
+     "940GZZLUGHK",
+     "940GZZLUSBM"
+    ],
+    [
+     "940GZZLUGHK",
+     "HUBHMS"
+    ],
+    [
+     "940GZZLUGTR",
+     "940GZZLUHSK"
+    ],
+    [
+     "940GZZLUGTR",
+     "940GZZLUSKS"
+    ],
+    [
+     "940GZZLUHSK",
+     "940GZZLUNHG"
+    ],
+    [
+     "940GZZLULAD",
+     "940GZZLULRD"
+    ],
+    [
+     "940GZZLULAD",
+     "940GZZLUWSP"
+    ],
+    [
+     "940GZZLULRD",
+     "940GZZLUWLA"
+    ],
+    [
+     "940GZZLUMMT",
+     "940GZZLUTWH"
+    ],
+    [
+     "940GZZLUMMT",
+     "HUBCST"
+    ],
+    [
+     "940GZZLUMSH",
+     "HUBBFR"
+    ],
+    [
+     "940GZZLUMSH",
+     "HUBCST"
+    ],
+    [
+     "940GZZLURYO",
+     "940GZZLUWSP"
+    ],
+    [
+     "940GZZLURYO",
+     "HUBPAD"
+    ],
+    [
+     "940GZZLUSBM",
+     "940GZZLUWLA"
+    ],
+    [
+     "940GZZLUSJP",
+     "HUBVIC"
+    ],
+    [
+     "940GZZLUSJP",
+     "HUBWSM"
+    ],
+    [
+     "940GZZLUSKS",
+     "940GZZLUSSQ"
+    ],
+    [
+     "940GZZLUSSQ",
+     "HUBVIC"
+    ],
+    [
+     "940GZZLUTMP",
+     "HUBBFR"
+    ],
+    [
+     "HUBKGX",
+     "HUBZFD"
+    ],
+    [
+     "HUBLST",
+     "HUBZMG"
+    ]
+   ]
+  },
+  {
+   "id": "district",
+   "name": "District",
+   "color": "#00782A",
+   "mode": "tube",
+   "edges": [
+    [
+     "940GZZLUACT",
+     "940GZZLUCWP"
+    ],
+    [
+     "940GZZLUACT",
+     "940GZZLUECM"
+    ],
+    [
+     "940GZZLUADE",
+     "940GZZLUTWH"
+    ],
+    [
+     "940GZZLUADE",
+     "HUBZWL"
+    ],
+    [
+     "940GZZLUBBB",
+     "940GZZLUBWR"
+    ],
+    [
+     "940GZZLUBBB",
+     "HUBWEH"
+    ],
+    [
+     "940GZZLUBEC",
+     "940GZZLUDGY"
+    ],
+    [
+     "940GZZLUBEC",
+     "940GZZLUUPY"
+    ],
+    [
+     "940GZZLUBSC",
+     "940GZZLUWKN"
+    ],
+    [
+     "940GZZLUBSC",
+     "HUBHMS"
+    ],
+    [
+     "940GZZLUBWR",
+     "940GZZLUMED"
+    ],
+    [
+     "940GZZLUBWT",
+     "940GZZLUNHG"
+    ],
+    [
+     "940GZZLUBWT",
+     "HUBPAD"
+    ],
+    [
+     "940GZZLUCWP",
+     "940GZZLUTNG"
+    ],
+    [
+     "940GZZLUDGE",
+     "940GZZLUDGY"
+    ],
+    [
+     "940GZZLUDGE",
+     "940GZZLUEPK"
+    ],
+    [
+     "940GZZLUECM",
+     "HUBEAL"
+    ],
+    [
+     "940GZZLUECT",
+     "940GZZLUGTR"
+    ],
+    [
+     "940GZZLUECT",
+     "940GZZLUHSK"
+    ],
+    [
+     "940GZZLUECT",
+     "940GZZLUWKN"
+    ],
+    [
+     "940GZZLUECT",
+     "HUBKPA"
+    ],
+    [
+     "940GZZLUECT",
+     "HUBWBP"
+    ],
+    [
+     "940GZZLUEHM",
+     "940GZZLUUPK"
+    ],
+    [
+     "940GZZLUEHM",
+     "HUBBKG"
+    ],
+    [
+     "940GZZLUEMB",
+     "940GZZLUTMP"
+    ],
+    [
+     "940GZZLUEMB",
+     "HUBWSM"
+    ],
+    [
+     "940GZZLUEPK",
+     "940GZZLUHCH"
+    ],
+    [
+     "940GZZLUEPY",
+     "940GZZLUPYB"
+    ],
+    [
+     "940GZZLUEPY",
+     "940GZZLUSFS"
+    ],
+    [
+     "940GZZLUERC",
+     "HUBPAD"
+    ],
+    [
+     "940GZZLUFBY",
+     "940GZZLUPSG"
+    ],
+    [
+     "940GZZLUFBY",
+     "HUBWBP"
+    ],
+    [
+     "940GZZLUGTR",
+     "940GZZLUSKS"
+    ],
+    [
+     "940GZZLUHCH",
+     "940GZZLUUPB"
+    ],
+    [
+     "940GZZLUHSK",
+     "940GZZLUNHG"
+    ],
+    [
+     "940GZZLUMED",
+     "940GZZLUSGN"
+    ],
+    [
+     "940GZZLUMMT",
+     "940GZZLUTWH"
+    ],
+    [
+     "940GZZLUMMT",
+     "HUBCST"
+    ],
+    [
+     "940GZZLUMSH",
+     "HUBBFR"
+    ],
+    [
+     "940GZZLUMSH",
+     "HUBCST"
+    ],
+    [
+     "940GZZLUPLW",
+     "940GZZLUUPK"
+    ],
+    [
+     "940GZZLUPLW",
+     "HUBWEH"
+    ],
+    [
+     "940GZZLUPSG",
+     "940GZZLUPYB"
+    ],
+    [
+     "940GZZLURVP",
+     "940GZZLUSFB"
+    ],
+    [
+     "940GZZLURVP",
+     "HUBHMS"
+    ],
+    [
+     "940GZZLUSFB",
+     "940GZZLUTNG"
+    ],
+    [
+     "940GZZLUSFS",
+     "940GZZLUWIP"
+    ],
+    [
+     "940GZZLUSGN",
+     "HUBZWL"
+    ],
+    [
+     "940GZZLUSJP",
+     "HUBVIC"
+    ],
+    [
+     "940GZZLUSJP",
+     "HUBWSM"
+    ],
+    [
+     "940GZZLUSKS",
+     "940GZZLUSSQ"
+    ],
+    [
+     "940GZZLUSSQ",
+     "HUBVIC"
+    ],
+    [
+     "940GZZLUTMP",
+     "HUBBFR"
+    ],
+    [
+     "940GZZLUTNG",
+     "HUBGUN"
+    ],
+    [
+     "940GZZLUUPB",
+     "HUBUPM"
+    ],
+    [
+     "940GZZLUUPY",
+     "HUBBKG"
+    ],
+    [
+     "940GZZLUWIP",
+     "HUBWIM"
+    ],
+    [
+     "HUBGUN",
+     "HUBKWG"
+    ],
+    [
+     "HUBKWG",
+     "HUBRMD"
+    ]
+   ]
+  },
+  {
+   "id": "hammersmith-city",
+   "name": "Hammersmith & City",
+   "color": "#F3A9BB",
+   "mode": "tube",
+   "edges": [
+    [
+     "940GZZLUADE",
+     "HUBLST"
+    ],
+    [
+     "940GZZLUADE",
+     "HUBZWL"
+    ],
+    [
+     "940GZZLUBBB",
+     "940GZZLUBWR"
+    ],
+    [
+     "940GZZLUBBB",
+     "HUBWEH"
+    ],
+    [
+     "940GZZLUBBN",
+     "HUBZFD"
+    ],
+    [
+     "940GZZLUBBN",
+     "HUBZMG"
+    ],
+    [
+     "940GZZLUBST",
+     "940GZZLUERC"
+    ],
+    [
+     "940GZZLUBST",
+     "940GZZLUGPS"
+    ],
+    [
+     "940GZZLUBWR",
+     "940GZZLUMED"
+    ],
+    [
+     "940GZZLUEHM",
+     "940GZZLUUPK"
+    ],
+    [
+     "940GZZLUEHM",
+     "HUBBKG"
+    ],
+    [
+     "940GZZLUERC",
+     "HUBPAD"
+    ],
+    [
+     "940GZZLUESQ",
+     "940GZZLUGPS"
+    ],
+    [
+     "940GZZLUESQ",
+     "HUBKGX"
+    ],
+    [
+     "940GZZLUGHK",
+     "940GZZLUSBM"
+    ],
+    [
+     "940GZZLUGHK",
+     "HUBHMS"
+    ],
+    [
+     "940GZZLULAD",
+     "940GZZLULRD"
+    ],
+    [
+     "940GZZLULAD",
+     "940GZZLUWSP"
+    ],
+    [
+     "940GZZLULRD",
+     "940GZZLUWLA"
+    ],
+    [
+     "940GZZLUMED",
+     "940GZZLUSGN"
+    ],
+    [
+     "940GZZLUPLW",
+     "940GZZLUUPK"
+    ],
+    [
+     "940GZZLUPLW",
+     "HUBWEH"
+    ],
+    [
+     "940GZZLURYO",
+     "940GZZLUWSP"
+    ],
+    [
+     "940GZZLURYO",
+     "HUBPAD"
+    ],
+    [
+     "940GZZLUSBM",
+     "940GZZLUWLA"
+    ],
+    [
+     "940GZZLUSGN",
+     "HUBZWL"
+    ],
+    [
+     "HUBKGX",
+     "HUBZFD"
+    ],
+    [
+     "HUBLST",
+     "HUBZMG"
+    ]
+   ]
+  },
+  {
+   "id": "jubilee",
+   "name": "Jubilee",
+   "color": "#A0A5A9",
+   "mode": "tube",
+   "edges": [
+    [
+     "940GZZLUBMY",
+     "HUBLBG"
+    ],
+    [
+     "940GZZLUBMY",
+     "HUBZCW"
+    ],
+    [
+     "940GZZLUBST",
+     "940GZZLUSJW"
+    ],
+    [
+     "940GZZLUBST",
+     "HUBBDS"
+    ],
+    [
+     "940GZZLUCPK",
+     "940GZZLUQBY"
+    ],
+    [
+     "940GZZLUCPK",
+     "940GZZLUSTM"
+    ],
+    [
+     "940GZZLUDOH",
+     "940GZZLUNDN"
+    ],
+    [
+     "940GZZLUDOH",
+     "940GZZLUWIG"
+    ],
+    [
+     "940GZZLUFYR",
+     "940GZZLUSWC"
+    ],
+    [
+     "940GZZLUFYR",
+     "HUBWHD"
+    ],
+    [
+     "940GZZLUGPK",
+     "HUBBDS"
+    ],
+    [
+     "940GZZLUGPK",
+     "HUBWSM"
+    ],
+    [
+     "940GZZLUKBN",
+     "940GZZLUWIG"
+    ],
+    [
+     "940GZZLUKBN",
+     "HUBWHD"
+    ],
+    [
+     "940GZZLUKBY",
+     "940GZZLUQBY"
+    ],
+    [
+     "940GZZLUKBY",
+     "940GZZLUWYP"
+    ],
+    [
+     "940GZZLUNDN",
+     "940GZZLUWYP"
+    ],
+    [
+     "940GZZLUSJW",
+     "940GZZLUSWC"
+    ],
+    [
+     "940GZZLUSWK",
+     "HUBLBG"
+    ],
+    [
+     "940GZZLUSWK",
+     "HUBWAT"
+    ],
+    [
+     "HUBCAN",
+     "HUBNGW"
+    ],
+    [
+     "HUBCAN",
+     "HUBWEH"
+    ],
+    [
+     "HUBCAW",
+     "HUBNGW"
+    ],
+    [
+     "HUBCAW",
+     "HUBZCW"
+    ],
+    [
+     "HUBSRA",
+     "HUBWEH"
+    ],
+    [
+     "HUBWAT",
+     "HUBWSM"
+    ]
+   ]
+  },
+  {
+   "id": "metropolitan",
+   "name": "Metropolitan",
+   "color": "#9B0056",
+   "mode": "tube",
+   "edges": [
+    [
+     "940GZZLUALD",
+     "HUBLST"
+    ],
+    [
+     "940GZZLUBBN",
+     "HUBZFD"
+    ],
+    [
+     "940GZZLUBBN",
+     "HUBZMG"
+    ],
+    [
+     "940GZZLUBST",
+     "940GZZLUFYR"
+    ],
+    [
+     "940GZZLUBST",
+     "940GZZLUGPS"
+    ],
+    [
+     "940GZZLUCSM",
+     "HUBCFO"
+    ],
+    [
+     "940GZZLUCXY",
+     "940GZZLUMPK"
+    ],
+    [
+     "940GZZLUCXY",
+     "940GZZLUWAF"
+    ],
+    [
+     "940GZZLUEAE",
+     "940GZZLURSM"
+    ],
+    [
+     "940GZZLUEAE",
+     "940GZZLURYL"
+    ],
+    [
+     "940GZZLUESQ",
+     "940GZZLUGPS"
+    ],
+    [
+     "940GZZLUESQ",
+     "HUBKGX"
+    ],
+    [
+     "940GZZLUFYR",
+     "940GZZLUWIG"
+    ],
+    [
+     "940GZZLUFYR",
+     "940GZZLUWYP"
+    ],
+    [
+     "940GZZLUHGD",
+     "940GZZLUICK"
+    ],
+    [
+     "940GZZLUHGD",
+     "940GZZLUUXB"
+    ],
+    [
+     "940GZZLUICK",
+     "940GZZLURSP"
+    ],
+    [
+     "940GZZLUMPK",
+     "940GZZLUNOW"
+    ],
+    [
+     "940GZZLUMPK",
+     "HUBRIC"
+    ],
+    [
+     "940GZZLUNHA",
+     "940GZZLUPNR"
+    ],
+    [
+     "940GZZLUNHA",
+     "HUBHOH"
+    ],
+    [
+     "940GZZLUNKP",
+     "940GZZLUPRD"
+    ],
+    [
+     "940GZZLUNKP",
+     "HUBHOH"
+    ],
+    [
+     "940GZZLUNOW",
+     "940GZZLUNWH"
+    ],
+    [
+     "940GZZLUNWH",
+     "940GZZLUPNR"
+    ],
+    [
+     "940GZZLUPRD",
+     "940GZZLUWYP"
+    ],
+    [
+     "940GZZLURSM",
+     "940GZZLURSP"
+    ],
+    [
+     "940GZZLURYL",
+     "940GZZLUWHW"
+    ],
+    [
+     "940GZZLUWHW",
+     "HUBHOH"
+    ],
+    [
+     "940GZZLUWIG",
+     "940GZZLUWYP"
+    ],
+    [
+     "HUBAMR",
+     "HUBCFO"
+    ],
+    [
+     "HUBCFO",
+     "HUBCLW"
+    ],
+    [
+     "HUBCLW",
+     "HUBRIC"
+    ],
+    [
+     "HUBKGX",
+     "HUBZFD"
+    ],
+    [
+     "HUBLST",
+     "HUBZMG"
+    ]
+   ]
+  },
+  {
+   "id": "northern",
+   "name": "Northern",
+   "color": "#000000",
+   "mode": "tube",
+   "edges": [
+    [
+     "940GZZBPSUST",
+     "940GZZNEUGST"
+    ],
+    [
+     "940GZZLUACY",
+     "940GZZLUHGT"
+    ],
+    [
+     "940GZZLUACY",
+     "940GZZLUTFP"
+    ],
+    [
+     "940GZZLUAGL",
+     "HUBKGX"
+    ],
+    [
+     "940GZZLUAGL",
+     "HUBOLD"
+    ],
+    [
+     "940GZZLUBOR",
+     "HUBEPH"
+    ],
+    [
+     "940GZZLUBOR",
+     "HUBLBG"
+    ],
+    [
+     "940GZZLUBTK",
+     "940GZZLUCND"
+    ],
+    [
+     "940GZZLUBTK",
+     "940GZZLUEGW"
+    ],
+    [
+     "940GZZLUBTX",
+     "940GZZLUGGN"
+    ],
+    [
+     "940GZZLUBTX",
+     "940GZZLUHCL"
+    ],
+    [
+     "940GZZLUBZP",
+     "940GZZLUCFM"
+    ],
+    [
+     "940GZZLUBZP",
+     "940GZZLUHTD"
+    ],
+    [
+     "940GZZLUCFM",
+     "940GZZLUCTN"
+    ],
+    [
+     "940GZZLUCND",
+     "940GZZLUHCL"
+    ],
+    [
+     "940GZZLUCPC",
+     "940GZZLUCPN"
+    ],
+    [
+     "940GZZLUCPC",
+     "940GZZLUCPS"
+    ],
+    [
+     "940GZZLUCPN",
+     "940GZZLUSKW"
+    ],
+    [
+     "940GZZLUCPS",
+     "HUBBAL"
+    ],
+    [
+     "940GZZLUCSD",
+     "940GZZLUSWN"
+    ],
+    [
+     "940GZZLUCSD",
+     "940GZZLUTBY"
+    ],
+    [
+     "940GZZLUCTN",
+     "940GZZLUMTC"
+    ],
+    [
+     "940GZZLUCTN",
+     "HUBEUS"
+    ],
+    [
+     "940GZZLUCTN",
+     "HUBKTN"
+    ],
+    [
+     "940GZZLUEFY",
+     "940GZZLUFYC"
+    ],
+    [
+     "940GZZLUEFY",
+     "940GZZLUHGT"
+    ],
+    [
+     "940GZZLUEMB",
+     "HUBCHX"
+    ],
+    [
+     "940GZZLUEMB",
+     "HUBWAT"
+    ],
+    [
+     "940GZZLUFYC",
+     "940GZZLUMHL"
+    ],
+    [
+     "940GZZLUFYC",
+     "940GZZLUWFN"
+    ],
+    [
+     "940GZZLUGDG",
+     "940GZZLUWRR"
+    ],
+    [
+     "940GZZLUGDG",
+     "HUBTCR"
+    ],
+    [
+     "940GZZLUGGN",
+     "940GZZLUHTD"
+    ],
+    [
+     "940GZZLUHBT",
+     "940GZZLUTAW"
+    ],
+    [
+     "940GZZLUKNG",
+     "940GZZLUOVL"
+    ],
+    [
+     "940GZZLUKNG",
+     "940GZZNEUGST"
+    ],
+    [
+     "940GZZLUKNG",
+     "HUBEPH"
+    ],
+    [
+     "940GZZLUKNG",
+     "HUBWAT"
+    ],
+    [
+     "940GZZLULSQ",
+     "HUBCHX"
+    ],
+    [
+     "940GZZLULSQ",
+     "HUBTCR"
+    ],
+    [
+     "940GZZLUMDN",
+     "940GZZLUSWN"
+    ],
+    [
+     "940GZZLUMTC",
+     "HUBEUS"
+    ],
+    [
+     "940GZZLUOVL",
+     "940GZZLUSKW"
+    ],
+    [
+     "940GZZLUTAW",
+     "940GZZLUWOP"
+    ],
+    [
+     "940GZZLUTBC",
+     "940GZZLUTBY"
+    ],
+    [
+     "940GZZLUTBC",
+     "HUBBAL"
+    ],
+    [
+     "940GZZLUTFP",
+     "HUBKTN"
+    ],
+    [
+     "940GZZLUWFN",
+     "940GZZLUWOP"
+    ],
+    [
+     "940GZZLUWRR",
+     "HUBEUS"
+    ],
+    [
+     "HUBBAN",
+     "HUBLBG"
+    ],
+    [
+     "HUBBAN",
+     "HUBZMG"
+    ],
+    [
+     "HUBEUS",
+     "HUBKGX"
+    ],
+    [
+     "HUBOLD",
+     "HUBZMG"
+    ]
+   ]
+  },
+  {
+   "id": "piccadilly",
+   "name": "Piccadilly",
+   "color": "#003688",
+   "mode": "tube",
+   "edges": [
+    [
+     "940GZZLUACT",
+     "940GZZLUECM"
+    ],
+    [
+     "940GZZLUACT",
+     "940GZZLUSEA"
+    ],
+    [
+     "940GZZLUACT",
+     "940GZZLUTNG"
+    ],
+    [
+     "940GZZLUALP",
+     "940GZZLUPKR"
+    ],
+    [
+     "940GZZLUALP",
+     "940GZZLUSUT"
+    ],
+    [
+     "940GZZLUASG",
+     "940GZZLUBDS"
+    ],
+    [
+     "940GZZLUASG",
+     "940GZZLUSGT"
+    ],
+    [
+     "940GZZLUASL",
+     "940GZZLUHWY"
+    ],
+    [
+     "940GZZLUASL",
+     "HUBFPK"
+    ],
+    [
+     "940GZZLUBDS",
+     "940GZZLUWOG"
+    ],
+    [
+     "940GZZLUBOS",
+     "940GZZLUNFD"
+    ],
+    [
+     "940GZZLUBOS",
+     "940GZZLUOSY"
+    ],
+    [
+     "940GZZLUBSC",
+     "940GZZLUECT"
+    ],
+    [
+     "940GZZLUBSC",
+     "HUBHMS"
+    ],
+    [
+     "940GZZLUCAR",
+     "940GZZLUHWY"
+    ],
+    [
+     "940GZZLUCAR",
+     "HUBKGX"
+    ],
+    [
+     "940GZZLUCGN",
+     "940GZZLUHBN"
+    ],
+    [
+     "940GZZLUCGN",
+     "940GZZLULSQ"
+    ],
+    [
+     "940GZZLUCKS",
+     "940GZZLUOAK"
+    ],
+    [
+     "940GZZLUEAE",
+     "940GZZLURSM"
+    ],
+    [
+     "940GZZLUEAE",
+     "940GZZLURYL"
+    ],
+    [
+     "940GZZLUECM",
+     "940GZZLUNEN"
+    ],
+    [
+     "940GZZLUECT",
+     "940GZZLUGTR"
+    ],
+    [
+     "940GZZLUGPK",
+     "940GZZLUHPC"
+    ],
+    [
+     "940GZZLUGPK",
+     "940GZZLUPCC"
+    ],
+    [
+     "940GZZLUGTR",
+     "940GZZLUSKS"
+    ],
+    [
+     "940GZZLUHBN",
+     "940GZZLURSQ"
+    ],
+    [
+     "940GZZLUHGD",
+     "940GZZLUICK"
+    ],
+    [
+     "940GZZLUHGD",
+     "940GZZLUUXB"
+    ],
+    [
+     "940GZZLUHNX",
+     "940GZZLUHWT"
+    ],
+    [
+     "940GZZLUHNX",
+     "HUBH13"
+    ],
+    [
+     "940GZZLUHNX",
+     "HUBHX4"
+    ],
+    [
+     "940GZZLUHPC",
+     "940GZZLUKNB"
+    ],
+    [
+     "940GZZLUHWC",
+     "940GZZLUHWE"
+    ],
+    [
+     "940GZZLUHWC",
+     "940GZZLUHWT"
+    ],
+    [
+     "940GZZLUHWE",
+     "940GZZLUOSY"
+    ],
+    [
+     "940GZZLUICK",
+     "940GZZLURSP"
+    ],
+    [
+     "940GZZLUKNB",
+     "940GZZLUSKS"
+    ],
+    [
+     "940GZZLULSQ",
+     "940GZZLUPCC"
+    ],
+    [
+     "940GZZLUMRH",
+     "940GZZLUTPN"
+    ],
+    [
+     "940GZZLUMRH",
+     "HUBFPK"
+    ],
+    [
+     "940GZZLUNEN",
+     "940GZZLUPKR"
+    ],
+    [
+     "940GZZLUNFD",
+     "940GZZLUSEA"
+    ],
+    [
+     "940GZZLUOAK",
+     "940GZZLUSGT"
+    ],
+    [
+     "940GZZLURSM",
+     "940GZZLURSP"
+    ],
+    [
+     "940GZZLURSQ",
+     "HUBKGX"
+    ],
+    [
+     "940GZZLURYL",
+     "940GZZLUSHH"
+    ],
+    [
+     "940GZZLUSHH",
+     "940GZZLUSUH"
+    ],
+    [
+     "940GZZLUSUH",
+     "940GZZLUSUT"
+    ],
+    [
+     "940GZZLUTNG",
+     "HUBHMS"
+    ],
+    [
+     "940GZZLUTPN",
+     "940GZZLUWOG"
+    ],
+    [
+     "HUBH13",
+     "HUBHX4"
+    ],
+    [
+     "HUBH13",
+     "HUBHX5"
+    ]
+   ]
+  },
+  {
+   "id": "victoria",
+   "name": "Victoria",
+   "color": "#0098D4",
+   "mode": "tube",
+   "edges": [
+    [
+     "940GZZLUGPK",
+     "940GZZLUOXC"
+    ],
+    [
+     "940GZZLUGPK",
+     "HUBVIC"
+    ],
+    [
+     "940GZZLUOXC",
+     "940GZZLUWRR"
+    ],
+    [
+     "940GZZLUPCO",
+     "HUBVIC"
+    ],
+    [
+     "940GZZLUPCO",
+     "HUBVXH"
+    ],
+    [
+     "940GZZLUSKW",
+     "HUBBRX"
+    ],
+    [
+     "940GZZLUSKW",
+     "HUBVXH"
+    ],
+    [
+     "940GZZLUWRR",
+     "HUBEUS"
+    ],
+    [
+     "HUBBHO",
+     "HUBTOM"
+    ],
+    [
+     "HUBBHO",
+     "HUBWHC"
+    ],
+    [
+     "HUBEUS",
+     "HUBKGX"
+    ],
+    [
+     "HUBFPK",
+     "HUBHHY"
+    ],
+    [
+     "HUBFPK",
+     "HUBSVS"
+    ],
+    [
+     "HUBHHY",
+     "HUBKGX"
+    ],
+    [
+     "HUBSVS",
+     "HUBTOM"
+    ]
+   ]
+  },
+  {
+   "id": "waterloo-city",
+   "name": "Waterloo & City",
+   "color": "#95CDBA",
+   "mode": "tube",
+   "edges": [
+    [
+     "HUBBAN",
+     "HUBWAT"
+    ]
+   ]
+  },
+  {
+   "id": "liberty",
+   "name": "Liberty",
+   "color": "#6C7276",
+   "mode": "overground",
+   "edges": [
+    [
+     "910GEMRSPKH",
+     "910GROMFORD"
+    ],
+    [
+     "910GEMRSPKH",
+     "HUBUPM"
+    ]
+   ]
+  },
+  {
+   "id": "lioness",
+   "name": "Lioness",
+   "color": "#FBAE00",
+   "mode": "overground",
+   "edges": [
+    [
+     "910GCRPNDPK",
+     "910GHTCHEND"
+    ],
+    [
+     "910GCRPNDPK",
+     "HUBBSH"
+    ],
+    [
+     "910GHEDSTNL",
+     "910GHTCHEND"
+    ],
+    [
+     "910GHEDSTNL",
+     "HUBHRW"
+    ],
+    [
+     "910GKLBRNHR",
+     "910GSHMPSTD"
+    ],
+    [
+     "910GKLBRNHR",
+     "HUBQPW"
+    ],
+    [
+     "910GSHMPSTD",
+     "HUBEUS"
+    ],
+    [
+     "910GWATFDHS",
+     "HUBBSH"
+    ],
+    [
+     "910GWATFDHS",
+     "HUBWFJ"
+    ],
+    [
+     "HUBHDN",
+     "HUBSBP"
+    ],
+    [
+     "HUBHDN",
+     "HUBWIJ"
+    ],
+    [
+     "HUBHRW",
+     "HUBKNT"
+    ],
+    [
+     "HUBKNL",
+     "HUBQPW"
+    ],
+    [
+     "HUBKNL",
+     "HUBWIJ"
+    ],
+    [
+     "HUBKNT",
+     "HUBSOK"
+    ],
+    [
+     "HUBNWB",
+     "HUBSOK"
+    ],
+    [
+     "HUBNWB",
+     "HUBWMB"
+    ],
+    [
+     "HUBSBP",
+     "HUBWMB"
+    ]
+   ]
+  },
+  {
+   "id": "mildmay",
+   "name": "Mildmay",
+   "color": "#009FE3",
+   "mode": "overground",
+   "edges": [
+    [
+     "910GACTNCTL",
+     "910GSACTON"
+    ],
+    [
+     "910GACTNCTL",
+     "HUBWIJ"
+    ],
+    [
+     "910GBRBY",
+     "910GBRBYPK"
+    ],
+    [
+     "910GBRBY",
+     "HUBWHD"
+    ],
+    [
+     "910GBRBYPK",
+     "910GKENR"
+    ],
+    [
+     "910GCLDNNRB",
+     "910GCMDNRD"
+    ],
+    [
+     "910GCLDNNRB",
+     "HUBHHY"
+    ],
+    [
+     "910GCMDNRD",
+     "910GKNTSHTW"
+    ],
+    [
+     "910GCNNB",
+     "910GDALSKLD"
+    ],
+    [
+     "910GCNNB",
+     "HUBHHY"
+    ],
+    [
+     "910GDALSKLD",
+     "910GHACKNYC"
+    ],
+    [
+     "910GFNCHLYR",
+     "910GHMPSTDH"
+    ],
+    [
+     "910GFNCHLYR",
+     "HUBWHD"
+    ],
+    [
+     "910GGOSPLOK",
+     "910GHMPSTDH"
+    ],
+    [
+     "910GGOSPLOK",
+     "910GKNTSHTW"
+    ],
+    [
+     "910GHACKNYC",
+     "910GHOMRTON"
+    ],
+    [
+     "910GHACKNYW",
+     "910GHOMRTON"
+    ],
+    [
+     "910GHACKNYW",
+     "HUBSRA"
+    ],
+    [
+     "910GKENR",
+     "HUBWIJ"
+    ],
+    [
+     "910GSACTON",
+     "HUBGUN"
+    ],
+    [
+     "HUBCLJ",
+     "HUBIMP"
+    ],
+    [
+     "HUBGUN",
+     "HUBKWG"
+    ],
+    [
+     "HUBIMP",
+     "HUBWBP"
+    ],
+    [
+     "HUBKPA",
+     "HUBSPB"
+    ],
+    [
+     "HUBKPA",
+     "HUBWBP"
+    ],
+    [
+     "HUBKWG",
+     "HUBRMD"
+    ],
+    [
+     "HUBSPB",
+     "HUBWIJ"
+    ]
+   ]
+  },
+  {
+   "id": "suffragette",
+   "name": "Suffragette",
+   "color": "#00A166",
+   "mode": "overground",
+   "edges": [
+    [
+     "910GBARKRIV",
+     "HUBBKG"
+    ],
+    [
+     "910GCROUCHH",
+     "910GHRGYGL"
+    ],
+    [
+     "910GCROUCHH",
+     "910GUPRHLWY"
+    ],
+    [
+     "910GGOSPLOK",
+     "910GUPRHLWY"
+    ],
+    [
+     "910GHRGYGL",
+     "910GSTOTNHM"
+    ],
+    [
+     "910GLEYTNMR",
+     "910GLYTNSHR"
+    ],
+    [
+     "910GLEYTNMR",
+     "910GWLTHQRD"
+    ],
+    [
+     "910GLYTNSHR",
+     "910GWNSTDPK"
+    ],
+    [
+     "910GSTOTNHM",
+     "HUBBHO"
+    ],
+    [
+     "910GWDGRNPK",
+     "910GWNSTDPK"
+    ],
+    [
+     "910GWDGRNPK",
+     "HUBBKG"
+    ],
+    [
+     "910GWLTHQRD",
+     "HUBBHO"
+    ]
+   ]
+  },
+  {
+   "id": "weaver",
+   "name": "Weaver",
+   "color": "#9C1B2E",
+   "mode": "overground",
+   "edges": [
+    [
+     "910GBHILLPK",
+     "910GEDMNGRN"
+    ],
+    [
+     "910GBHILLPK",
+     "910GENFLDTN"
+    ],
+    [
+     "910GBRUCGRV",
+     "910GWHHRTLA"
+    ],
+    [
+     "910GBRUCGRV",
+     "HUBSVS"
+    ],
+    [
+     "910GBTHNLGR",
+     "910GCAMHTH"
+    ],
+    [
+     "910GBTHNLGR",
+     "HUBLST"
+    ],
+    [
+     "910GCAMHTH",
+     "910GLONFLDS"
+    ],
+    [
+     "910GCHESHNT",
+     "910GTHBLDSG"
+    ],
+    [
+     "910GCHINGFD",
+     "910GHGHMSPK"
+    ],
+    [
+     "910GCLAPTON",
+     "910GHAKNYNM"
+    ],
+    [
+     "910GCLAPTON",
+     "910GSTJMSST"
+    ],
+    [
+     "910GEDMNGRN",
+     "910GSBURY"
+    ],
+    [
+     "910GEDMNGRN",
+     "910GSIVRST"
+    ],
+    [
+     "910GHAKNYNM",
+     "910GLONFLDS"
+    ],
+    [
+     "910GHAKNYNM",
+     "910GRCTRYRD"
+    ],
+    [
+     "910GHGHMSPK",
+     "910GWDST"
+    ],
+    [
+     "910GRCTRYRD",
+     "910GSTKNWNG"
+    ],
+    [
+     "910GSBURY",
+     "910GTURKYST"
+    ],
+    [
+     "910GSIVRST",
+     "910GWHHRTLA"
+    ],
+    [
+     "910GSTJMSST",
+     "HUBWHC"
+    ],
+    [
+     "910GSTKNWNG",
+     "910GSTMFDHL"
+    ],
+    [
+     "910GSTMFDHL",
+     "HUBSVS"
+    ],
+    [
+     "910GTHBLDSG",
+     "910GTURKYST"
+    ],
+    [
+     "910GWDST",
+     "HUBWHC"
+    ]
+   ]
+  },
+  {
+   "id": "windrush",
+   "name": "Windrush",
+   "color": "#D22730",
+   "mode": "overground",
+   "edges": [
+    [
+     "910GANERLEY",
+     "910GPENEW"
+    ],
+    [
+     "910GANERLEY",
+     "HUBNWD"
+    ],
+    [
+     "910GBROCKLY",
+     "910GHONROPK"
+    ],
+    [
+     "910GBROCKLY",
+     "HUBNXG"
+    ],
+    [
+     "910GCLPHHS",
+     "910GDENMRKH"
+    ],
+    [
+     "910GCLPHHS",
+     "910GWNDSWRD"
+    ],
+    [
+     "910GCNNB",
+     "910GDALS"
+    ],
+    [
+     "910GCNNB",
+     "HUBHHY"
+    ],
+    [
+     "910GDALS",
+     "910GHAGGERS"
+    ],
+    [
+     "910GDENMRKH",
+     "910GPCKHMRY"
+    ],
+    [
+     "910GFORESTH",
+     "910GHONROPK"
+    ],
+    [
+     "910GFORESTH",
+     "HUBSYD"
+    ],
+    [
+     "910GHAGGERS",
+     "910GHOXTON"
+    ],
+    [
+     "910GHOXTON",
+     "910GSHRDHST"
+    ],
+    [
+     "910GPCKHMQD",
+     "910GPCKHMRY"
+    ],
+    [
+     "910GPCKHMQD",
+     "910GSURREYQ"
+    ],
+    [
+     "910GPENEW",
+     "HUBSYD"
+    ],
+    [
+     "910GRTHERHI",
+     "910GWAPPING"
+    ],
+    [
+     "910GRTHERHI",
+     "HUBZCW"
+    ],
+    [
+     "910GSHRDHST",
+     "HUBZWL"
+    ],
+    [
+     "910GSURREYQ",
+     "HUBNWX"
+    ],
+    [
+     "910GSURREYQ",
+     "HUBNXG"
+    ],
+    [
+     "910GSURREYQ",
+     "HUBZCW"
+    ],
+    [
+     "910GWAPPING",
+     "HUBSDE"
+    ],
+    [
+     "910GWNDSWRD",
+     "HUBCLJ"
+    ],
+    [
+     "HUBCYP",
+     "HUBSYD"
+    ],
+    [
+     "HUBNWD",
+     "HUBWCY"
+    ],
+    [
+     "HUBSDE",
+     "HUBZWL"
+    ]
+   ]
+  },
+  {
+   "id": "dlr",
+   "name": "DLR",
+   "color": "#00A4A7",
+   "mode": "dlr",
+   "edges": [
+    [
+     "940GZZDLABR",
+     "940GZZDLSHS"
+    ],
+    [
+     "940GZZDLABR",
+     "HUBWEH"
+    ],
+    [
+     "940GZZDLALL",
+     "940GZZDLLDP"
+    ],
+    [
+     "940GZZDLALL",
+     "940GZZDLPOP"
+    ],
+    [
+     "940GZZDLBEC",
+     "940GZZDLGAL"
+    ],
+    [
+     "940GZZDLBLA",
+     "940GZZDLEIN"
+    ],
+    [
+     "940GZZDLBLA",
+     "940GZZDLPOP"
+    ],
+    [
+     "940GZZDLBOW",
+     "940GZZDLDEV"
+    ],
+    [
+     "940GZZDLBOW",
+     "940GZZDLPUD"
+    ],
+    [
+     "940GZZDLBPK",
+     "940GZZDLCYP"
+    ],
+    [
+     "940GZZDLBPK",
+     "940GZZDLRAL"
+    ],
+    [
+     "940GZZDLCLA",
+     "940GZZDLMUD"
+    ],
+    [
+     "940GZZDLCLA",
+     "940GZZDLSOQ"
+    ],
+    [
+     "940GZZDLCYP",
+     "940GZZDLGAL"
+    ],
+    [
+     "940GZZDLDEP",
+     "940GZZDLELV"
+    ],
+    [
+     "940GZZDLDEP",
+     "HUBGNW"
+    ],
+    [
+     "940GZZDLDEV",
+     "940GZZDLLDP"
+    ],
+    [
+     "940GZZDLEIN",
+     "HUBCAN"
+    ],
+    [
+     "940GZZDLELV",
+     "HUBLEW"
+    ],
+    [
+     "940GZZDLHEQ",
+     "940GZZDLSOQ"
+    ],
+    [
+     "940GZZDLHEQ",
+     "HUBCAW"
+    ],
+    [
+     "940GZZDLISL",
+     "940GZZDLMUD"
+    ],
+    [
+     "940GZZDLISL",
+     "HUBCUT"
+    ],
+    [
+     "940GZZDLKGV",
+     "HUBLCY"
+    ],
+    [
+     "940GZZDLKGV",
+     "HUBWWA"
+    ],
+    [
+     "940GZZDLPDK",
+     "940GZZDLWSV"
+    ],
+    [
+     "940GZZDLPDK",
+     "HUBLCY"
+    ],
+    [
+     "940GZZDLPOP",
+     "940GZZDLWFE"
+    ],
+    [
+     "940GZZDLPOP",
+     "940GZZDLWIQ"
+    ],
+    [
+     "940GZZDLPRE",
+     "940GZZDLRAL"
+    ],
+    [
+     "940GZZDLPRE",
+     "HUBCUS"
+    ],
+    [
+     "940GZZDLPUD",
+     "HUBSRA"
+    ],
+    [
+     "940GZZDLSHS",
+     "HUBSRA"
+    ],
+    [
+     "940GZZDLSIT",
+     "HUBSRA"
+    ],
+    [
+     "940GZZDLSTL",
+     "HUBCAN"
+    ],
+    [
+     "940GZZDLSTL",
+     "HUBWEH"
+    ],
+    [
+     "940GZZDLWFE",
+     "940GZZDLWIQ"
+    ],
+    [
+     "940GZZDLWFE",
+     "HUBCAW"
+    ],
+    [
+     "940GZZDLWFE",
+     "HUBLHS"
+    ],
+    [
+     "940GZZDLWIQ",
+     "HUBCAW"
+    ],
+    [
+     "940GZZDLWSV",
+     "HUBCAN"
+    ],
+    [
+     "HUBBAN",
+     "HUBSDE"
+    ],
+    [
+     "HUBCAN",
+     "HUBRVC"
+    ],
+    [
+     "HUBCUS",
+     "HUBRVC"
+    ],
+    [
+     "HUBCUT",
+     "HUBGNW"
+    ],
+    [
+     "HUBLHS",
+     "HUBSDE"
+    ],
+    [
+     "HUBSDE",
+     "HUBTOG"
+    ]
+   ]
+  },
+  {
+   "id": "elizabeth",
+   "name": "Elizabeth line",
+   "color": "#6950A1",
+   "mode": "elizabeth-line",
+   "edges": [
+    [
+     "910GACTONML",
+     "HUBEAL"
+    ],
+    [
+     "910GACTONML",
+     "HUBPAD"
+    ],
+    [
+     "910GBNHAM",
+     "910GSLOUGH"
+    ],
+    [
+     "910GBNHAM",
+     "910GTAPLOW"
+    ],
+    [
+     "910GBRTWOOD",
+     "910GHRLDWOD"
+    ],
+    [
+     "910GBRTWOOD",
+     "910GSHENFLD"
+    ],
+    [
+     "910GCHDWLHT",
+     "910GGODMAYS"
+    ],
+    [
+     "910GCHDWLHT",
+     "910GROMFORD"
+    ],
+    [
+     "910GFRSTGT",
+     "910GMANRPK"
+    ],
+    [
+     "910GFRSTGT",
+     "910GMRYLAND"
+    ],
+    [
+     "910GGIDEAPK",
+     "910GHRLDWOD"
+    ],
+    [
+     "910GGIDEAPK",
+     "910GROMFORD"
+    ],
+    [
+     "910GGODMAYS",
+     "910GSVNKNGS"
+    ],
+    [
+     "910GHANWELL",
+     "910GSTHALL"
+    ],
+    [
+     "910GHANWELL",
+     "910GWEALING"
+    ],
+    [
+     "910GHAYESAH",
+     "910GSTHALL"
+    ],
+    [
+     "910GHAYESAH",
+     "910GWDRYTON"
+    ],
+    [
+     "910GHAYESAH",
+     "HUBH13"
+    ],
+    [
+     "910GILFORD",
+     "910GMANRPK"
+    ],
+    [
+     "910GILFORD",
+     "910GSVNKNGS"
+    ],
+    [
+     "910GIVER",
+     "910GLANGLEY"
+    ],
+    [
+     "910GIVER",
+     "910GWDRYTON"
+    ],
+    [
+     "910GLANGLEY",
+     "910GSLOUGH"
+    ],
+    [
+     "910GMDNHEAD",
+     "910GTAPLOW"
+    ],
+    [
+     "910GMDNHEAD",
+     "910GTWYFORD"
+    ],
+    [
+     "910GMRYLAND",
+     "HUBSRA"
+    ],
+    [
+     "910GRDNGSTN",
+     "910GTWYFORD"
+    ],
+    [
+     "910GWEALING",
+     "HUBEAL"
+    ],
+    [
+     "910GWOLWXR",
+     "HUBABW"
+    ],
+    [
+     "910GWOLWXR",
+     "HUBCUS"
+    ],
+    [
+     "HUBBDS",
+     "HUBPAD"
+    ],
+    [
+     "HUBBDS",
+     "HUBTCR"
+    ],
+    [
+     "HUBCAW",
+     "HUBCUS"
+    ],
+    [
+     "HUBCAW",
+     "HUBZWL"
+    ],
+    [
+     "HUBH13",
+     "HUBHX4"
+    ],
+    [
+     "HUBH13",
+     "HUBHX5"
+    ],
+    [
+     "HUBLST",
+     "HUBSRA"
+    ],
+    [
+     "HUBLST",
+     "HUBZFD"
+    ],
+    [
+     "HUBLST",
+     "HUBZWL"
+    ],
+    [
+     "HUBSRA",
+     "HUBZWL"
+    ],
+    [
+     "HUBTCR",
+     "HUBZFD"
+    ]
+   ]
+  }
+ ],
+ "stations": {
+  "910GACTNCTL": {
+   "name": "Acton Central",
+   "lat": 51.508716,
+   "lon": -0.262971,
+   "zone": "3",
+   "lines": [
+    "mildmay"
+   ]
+  },
+  "910GACTONML": {
+   "name": "Acton Main Line",
+   "lat": 51.51718,
+   "lon": -0.266756,
+   "zone": "3",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GANERLEY": {
+   "name": "Anerley",
+   "lat": 51.412153,
+   "lon": -0.065886,
+   "zone": "4",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GBARKRIV": {
+   "name": "Barking Riverside",
+   "lat": 51.51953,
+   "lon": 0.11596,
+   "zone": "4",
+   "lines": [
+    "suffragette"
+   ]
+  },
+  "910GBHILLPK": {
+   "name": "Bush Hill Park",
+   "lat": 51.641519,
+   "lon": -0.069221,
+   "zone": "5",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GBNHAM": {
+   "name": "Burnham (Berks)",
+   "lat": 51.523506,
+   "lon": -0.646374,
+   "zone": null,
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GBRBY": {
+   "name": "Brondesbury",
+   "lat": 51.545166,
+   "lon": -0.202309,
+   "zone": "2",
+   "lines": [
+    "mildmay"
+   ]
+  },
+  "910GBRBYPK": {
+   "name": "Brondesbury Park",
+   "lat": 51.540734,
+   "lon": -0.210054,
+   "zone": "2",
+   "lines": [
+    "mildmay"
+   ]
+  },
+  "910GBROCKLY": {
+   "name": "Brockley",
+   "lat": 51.464649,
+   "lon": -0.037537,
+   "zone": "2",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GBRTWOOD": {
+   "name": "Brentwood",
+   "lat": 51.613605,
+   "lon": 0.299586,
+   "zone": "9",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GBRUCGRV": {
+   "name": "Bruce Grove",
+   "lat": 51.593959,
+   "lon": -0.069867,
+   "zone": "3",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GBTHNLGR": {
+   "name": "Bethnal Green",
+   "lat": 51.523917,
+   "lon": -0.059568,
+   "zone": "2",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GCAMHTH": {
+   "name": "Cambridge Heath (London)",
+   "lat": 51.531973,
+   "lon": -0.057279,
+   "zone": "2",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GCHDWLHT": {
+   "name": "Chadwell Heath",
+   "lat": 51.568039,
+   "lon": 0.128958,
+   "zone": "5",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GCHESHNT": {
+   "name": "Cheshunt",
+   "lat": 51.702876,
+   "lon": -0.02396,
+   "zone": "8",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GCHINGFD": {
+   "name": "Chingford",
+   "lat": 51.633087,
+   "lon": 0.009897,
+   "zone": "5",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GCLAPTON": {
+   "name": "Clapton",
+   "lat": 51.561644,
+   "lon": -0.057025,
+   "zone": "2+3",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GCLDNNRB": {
+   "name": "Caledonian Road & Barnsbury",
+   "lat": 51.543041,
+   "lon": -0.116729,
+   "zone": "2",
+   "lines": [
+    "mildmay"
+   ]
+  },
+  "910GCLPHHS": {
+   "name": "Clapham High Street",
+   "lat": 51.465481,
+   "lon": -0.132522,
+   "zone": "2",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GCMDNRD": {
+   "name": "Camden Road",
+   "lat": 51.541791,
+   "lon": -0.138701,
+   "zone": "2",
+   "lines": [
+    "mildmay"
+   ]
+  },
+  "910GCNNB": {
+   "name": "Canonbury",
+   "lat": 51.548732,
+   "lon": -0.092191,
+   "zone": "2",
+   "lines": [
+    "mildmay",
+    "windrush"
+   ]
+  },
+  "910GCROUCHH": {
+   "name": "Crouch Hill",
+   "lat": 51.571302,
+   "lon": -0.117149,
+   "zone": "3",
+   "lines": [
+    "suffragette"
+   ]
+  },
+  "910GCRPNDPK": {
+   "name": "Carpenders Park",
+   "lat": 51.628351,
+   "lon": -0.385939,
+   "zone": "7",
+   "lines": [
+    "lioness"
+   ]
+  },
+  "910GDALS": {
+   "name": "Dalston Junction",
+   "lat": 51.546116,
+   "lon": -0.075137,
+   "zone": "2",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GDALSKLD": {
+   "name": "Dalston Kingsland",
+   "lat": 51.548148,
+   "lon": -0.075701,
+   "zone": "2",
+   "lines": [
+    "mildmay"
+   ]
+  },
+  "910GDENMRKH": {
+   "name": "Denmark Hill",
+   "lat": 51.468203,
+   "lon": -0.089361,
+   "zone": "2",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GEDMNGRN": {
+   "name": "Edmonton Green",
+   "lat": 51.624929,
+   "lon": -0.061112,
+   "zone": "4",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GEMRSPKH": {
+   "name": "Emerson Park",
+   "lat": 51.568642,
+   "lon": 0.220113,
+   "zone": "6",
+   "lines": [
+    "liberty"
+   ]
+  },
+  "910GENFLDTN": {
+   "name": "Enfield Town",
+   "lat": 51.652026,
+   "lon": -0.079328,
+   "zone": "5",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GFNCHLYR": {
+   "name": "Finchley Road & Frognal",
+   "lat": 51.550266,
+   "lon": -0.183141,
+   "zone": "2",
+   "lines": [
+    "mildmay"
+   ]
+  },
+  "910GFORESTH": {
+   "name": "Forest Hill",
+   "lat": 51.43928,
+   "lon": -0.053157,
+   "zone": "3",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GFRSTGT": {
+   "name": "Forest Gate",
+   "lat": 51.549432,
+   "lon": 0.024353,
+   "zone": "3",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GGIDEAPK": {
+   "name": "Gidea Park",
+   "lat": 51.581904,
+   "lon": 0.205964,
+   "zone": "6",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GGODMAYS": {
+   "name": "Goodmayes",
+   "lat": 51.565579,
+   "lon": 0.110807,
+   "zone": "4",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GGOSPLOK": {
+   "name": "Gospel Oak",
+   "lat": 51.555335,
+   "lon": -0.15077,
+   "zone": "2",
+   "lines": [
+    "mildmay",
+    "suffragette"
+   ]
+  },
+  "910GHACKNYC": {
+   "name": "Hackney Central",
+   "lat": 51.547105,
+   "lon": -0.056058,
+   "zone": "2",
+   "lines": [
+    "mildmay"
+   ]
+  },
+  "910GHACKNYW": {
+   "name": "Hackney Wick",
+   "lat": 51.54341,
+   "lon": -0.02492,
+   "zone": "2",
+   "lines": [
+    "mildmay"
+   ]
+  },
+  "910GHAGGERS": {
+   "name": "Haggerston",
+   "lat": 51.538705,
+   "lon": -0.075666,
+   "zone": "2",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GHAKNYNM": {
+   "name": "Hackney Downs",
+   "lat": 51.548757,
+   "lon": -0.060819,
+   "zone": "2",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GHANWELL": {
+   "name": "Hanwell",
+   "lat": 51.511835,
+   "lon": -0.338583,
+   "zone": "4",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GHAYESAH": {
+   "name": "Hayes & Harlington",
+   "lat": 51.503096,
+   "lon": -0.420683,
+   "zone": "5",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GHEDSTNL": {
+   "name": "Headstone Lane",
+   "lat": 51.602649,
+   "lon": -0.35722,
+   "zone": "5",
+   "lines": [
+    "lioness"
+   ]
+  },
+  "910GHGHMSPK": {
+   "name": "Highams Park",
+   "lat": 51.60835,
+   "lon": -0.000222,
+   "zone": "4",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GHMPSTDH": {
+   "name": "Hampstead Heath",
+   "lat": 51.55521,
+   "lon": -0.165705,
+   "zone": "2",
+   "lines": [
+    "mildmay"
+   ]
+  },
+  "910GHOMRTON": {
+   "name": "Homerton",
+   "lat": 51.547012,
+   "lon": -0.04236,
+   "zone": "2",
+   "lines": [
+    "mildmay"
+   ]
+  },
+  "910GHONROPK": {
+   "name": "Honor Oak Park",
+   "lat": 51.449989,
+   "lon": -0.045505,
+   "zone": "3",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GHOXTON": {
+   "name": "Hoxton",
+   "lat": 51.531512,
+   "lon": -0.075681,
+   "zone": "1+2",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GHRGYGL": {
+   "name": "Harringay Green Lanes",
+   "lat": 51.577182,
+   "lon": -0.098144,
+   "zone": "3",
+   "lines": [
+    "suffragette"
+   ]
+  },
+  "910GHRLDWOD": {
+   "name": "Harold Wood",
+   "lat": 51.592766,
+   "lon": 0.233129,
+   "zone": "6",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GHTCHEND": {
+   "name": "Hatch End",
+   "lat": 51.609417,
+   "lon": -0.368601,
+   "zone": "6",
+   "lines": [
+    "lioness"
+   ]
+  },
+  "910GILFORD": {
+   "name": "Ilford",
+   "lat": 51.559118,
+   "lon": 0.06968,
+   "zone": "4",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GIVER": {
+   "name": "Iver",
+   "lat": 51.508503,
+   "lon": -0.506726,
+   "zone": null,
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GKENR": {
+   "name": "Kensal Rise",
+   "lat": 51.534554,
+   "lon": -0.219957,
+   "zone": "2",
+   "lines": [
+    "mildmay"
+   ]
+  },
+  "910GKLBRNHR": {
+   "name": "Kilburn High Road",
+   "lat": 51.537277,
+   "lon": -0.192237,
+   "zone": "2",
+   "lines": [
+    "lioness"
+   ]
+  },
+  "910GKNTSHTW": {
+   "name": "Kentish Town West",
+   "lat": 51.546548,
+   "lon": -0.146655,
+   "zone": "2",
+   "lines": [
+    "mildmay"
+   ]
+  },
+  "910GLANGLEY": {
+   "name": "Langley (Berks)",
+   "lat": 51.508062,
+   "lon": -0.541756,
+   "zone": null,
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GLEYTNMR": {
+   "name": "Leyton Midland Road",
+   "lat": 51.569725,
+   "lon": -0.008051,
+   "zone": "3",
+   "lines": [
+    "suffragette"
+   ]
+  },
+  "910GLONFLDS": {
+   "name": "London Fields",
+   "lat": 51.541153,
+   "lon": -0.057753,
+   "zone": "2",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GLYTNSHR": {
+   "name": "Leytonstone High Road",
+   "lat": 51.563554,
+   "lon": 0.008416,
+   "zone": "3",
+   "lines": [
+    "suffragette"
+   ]
+  },
+  "910GMANRPK": {
+   "name": "Manor Park",
+   "lat": 51.552477,
+   "lon": 0.046342,
+   "zone": "3+4",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GMDNHEAD": {
+   "name": "Maidenhead",
+   "lat": 51.518669,
+   "lon": -0.72266,
+   "zone": null,
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GMRYLAND": {
+   "name": "Maryland",
+   "lat": 51.546081,
+   "lon": 0.005815,
+   "zone": "3",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GPCKHMQD": {
+   "name": "Queens Road Peckham",
+   "lat": 51.473566,
+   "lon": -0.057313,
+   "zone": "2",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GPCKHMRY": {
+   "name": "Peckham Rye",
+   "lat": 51.470034,
+   "lon": -0.069414,
+   "zone": "2",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GPENEW": {
+   "name": "Penge West",
+   "lat": 51.417555,
+   "lon": -0.06084,
+   "zone": "4",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GRCTRYRD": {
+   "name": "Rectory Road",
+   "lat": 51.558502,
+   "lon": -0.068267,
+   "zone": "2",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GRDNGSTN": {
+   "name": "Reading",
+   "lat": 51.458786,
+   "lon": -0.971863,
+   "zone": null,
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GROMFORD": {
+   "name": "Romford",
+   "lat": 51.574829,
+   "lon": 0.183237,
+   "zone": "6",
+   "lines": [
+    "elizabeth",
+    "liberty"
+   ]
+  },
+  "910GRTHERHI": {
+   "name": "Rotherhithe",
+   "lat": 51.500817,
+   "lon": -0.052048,
+   "zone": "2",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GSACTON": {
+   "name": "South Acton",
+   "lat": 51.499695,
+   "lon": -0.270157,
+   "zone": "3",
+   "lines": [
+    "mildmay"
+   ]
+  },
+  "910GSBURY": {
+   "name": "Southbury",
+   "lat": 51.648705,
+   "lon": -0.052437,
+   "zone": "5",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GSHENFLD": {
+   "name": "Shenfield",
+   "lat": 51.630877,
+   "lon": 0.329851,
+   "zone": null,
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GSHMPSTD": {
+   "name": "South Hampstead",
+   "lat": 51.541432,
+   "lon": -0.178878,
+   "zone": "2",
+   "lines": [
+    "lioness"
+   ]
+  },
+  "910GSHRDHST": {
+   "name": "Shoreditch High Street",
+   "lat": 51.523375,
+   "lon": -0.075246,
+   "zone": "1",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GSIVRST": {
+   "name": "Silver Street",
+   "lat": 51.614688,
+   "lon": -0.06724,
+   "zone": "4",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GSLOUGH": {
+   "name": "Slough",
+   "lat": 51.51188,
+   "lon": -0.59151,
+   "zone": null,
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GSTHALL": {
+   "name": "Southall",
+   "lat": 51.505957,
+   "lon": -0.37861,
+   "zone": "4",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GSTJMSST": {
+   "name": "St James Street (London)",
+   "lat": 51.580981,
+   "lon": -0.032918,
+   "zone": "3",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GSTKNWNG": {
+   "name": "Stoke Newington",
+   "lat": 51.565233,
+   "lon": -0.072887,
+   "zone": "2",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GSTMFDHL": {
+   "name": "Stamford Hill",
+   "lat": 51.574467,
+   "lon": -0.076682,
+   "zone": "3",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GSTOTNHM": {
+   "name": "South Tottenham",
+   "lat": 51.580372,
+   "lon": -0.072103,
+   "zone": "3",
+   "lines": [
+    "suffragette"
+   ]
+  },
+  "910GSURREYQ": {
+   "name": "Surrey Quays",
+   "lat": 51.493196,
+   "lon": -0.047519,
+   "zone": "2",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GSVNKNGS": {
+   "name": "Seven Kings",
+   "lat": 51.564026,
+   "lon": 0.0971,
+   "zone": "4",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GTAPLOW": {
+   "name": "Taplow",
+   "lat": 51.523562,
+   "lon": -0.68137,
+   "zone": null,
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GTHBLDSG": {
+   "name": "Theobalds Grove",
+   "lat": 51.692457,
+   "lon": -0.034831,
+   "zone": "7",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GTURKYST": {
+   "name": "Turkey Street",
+   "lat": 51.672628,
+   "lon": -0.047217,
+   "zone": "6",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GTWYFORD": {
+   "name": "Twyford",
+   "lat": 51.475534,
+   "lon": -0.863293,
+   "zone": null,
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GUPRHLWY": {
+   "name": "Upper Holloway",
+   "lat": 51.563631,
+   "lon": -0.129513,
+   "zone": "2",
+   "lines": [
+    "suffragette"
+   ]
+  },
+  "910GWAPPING": {
+   "name": "Wapping",
+   "lat": 51.504388,
+   "lon": -0.055931,
+   "zone": "2",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GWATFDHS": {
+   "name": "Watford High Street",
+   "lat": 51.652655,
+   "lon": -0.391711,
+   "zone": "8",
+   "lines": [
+    "lioness"
+   ]
+  },
+  "910GWDGRNPK": {
+   "name": "Woodgrange Park",
+   "lat": 51.549264,
+   "lon": 0.044423,
+   "zone": "3+4",
+   "lines": [
+    "suffragette"
+   ]
+  },
+  "910GWDRYTON": {
+   "name": "West Drayton",
+   "lat": 51.510055,
+   "lon": -0.472234,
+   "zone": "6",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GWDST": {
+   "name": "Wood Street",
+   "lat": 51.58658,
+   "lon": -0.002405,
+   "zone": "4",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GWEALING": {
+   "name": "West Ealing",
+   "lat": 51.513506,
+   "lon": -0.320133,
+   "zone": "3",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "910GWHHRTLA": {
+   "name": "White Hart Lane",
+   "lat": 51.605037,
+   "lon": -0.070914,
+   "zone": "3",
+   "lines": [
+    "weaver"
+   ]
+  },
+  "910GWLTHQRD": {
+   "name": "Walthamstow Queens Road",
+   "lat": 51.581503,
+   "lon": -0.023846,
+   "zone": "3",
+   "lines": [
+    "suffragette"
+   ]
+  },
+  "910GWNDSWRD": {
+   "name": "Wandsworth Road",
+   "lat": 51.470216,
+   "lon": -0.13852,
+   "zone": "2",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "910GWNSTDPK": {
+   "name": "Wanstead Park",
+   "lat": 51.551693,
+   "lon": 0.026213,
+   "zone": "3",
+   "lines": [
+    "suffragette"
+   ]
+  },
+  "910GWOLWXR": {
+   "name": "Woolwich",
+   "lat": 51.492168,
+   "lon": 0.070593,
+   "zone": "4",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "940GZZBPSUST": {
+   "name": "Battersea Power Station",
+   "lat": 51.479932,
+   "lon": -0.142142,
+   "zone": "1",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZDLABR": {
+   "name": "Abbey Road",
+   "lat": 51.531926,
+   "lon": 0.003737,
+   "zone": "2/3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLALL": {
+   "name": "All Saints",
+   "lat": 51.511,
+   "lon": -0.013135,
+   "zone": "2",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLBEC": {
+   "name": "Beckton",
+   "lat": 51.514362,
+   "lon": 0.061453,
+   "zone": "3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLBLA": {
+   "name": "Blackwall",
+   "lat": 51.507991,
+   "lon": -0.006969,
+   "zone": "2",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLBOW": {
+   "name": "Bow Church",
+   "lat": 51.527858,
+   "lon": -0.020936,
+   "zone": "2",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLBPK": {
+   "name": "Beckton Park",
+   "lat": 51.508793,
+   "lon": 0.054932,
+   "zone": "3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLCLA": {
+   "name": "Crossharbour",
+   "lat": 51.495728,
+   "lon": -0.014606,
+   "zone": "2",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLCYP": {
+   "name": "Cyprus",
+   "lat": 51.508473,
+   "lon": 0.063925,
+   "zone": "3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLDEP": {
+   "name": "Deptford Bridge",
+   "lat": 51.474215,
+   "lon": -0.022438,
+   "zone": "2+3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLDEV": {
+   "name": "Devons Road",
+   "lat": 51.522667,
+   "lon": -0.017615,
+   "zone": "2",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLEIN": {
+   "name": "East India",
+   "lat": 51.509359,
+   "lon": -0.002326,
+   "zone": "2/3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLELV": {
+   "name": "Elverson Road",
+   "lat": 51.469074,
+   "lon": -0.016728,
+   "zone": "2+3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLGAL": {
+   "name": "Gallions Reach",
+   "lat": 51.508941,
+   "lon": 0.071555,
+   "zone": "3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLHEQ": {
+   "name": "Heron Quays",
+   "lat": 51.503379,
+   "lon": -0.021421,
+   "zone": "2",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLISL": {
+   "name": "Island Gardens",
+   "lat": 51.487811,
+   "lon": -0.010139,
+   "zone": "2",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLKGV": {
+   "name": "King George V",
+   "lat": 51.502003,
+   "lon": 0.062624,
+   "zone": "3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLLDP": {
+   "name": "Langdon Park",
+   "lat": 51.515172,
+   "lon": -0.01415,
+   "zone": "2",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLMUD": {
+   "name": "Mudchute",
+   "lat": 51.490704,
+   "lon": -0.014738,
+   "zone": "2",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLPDK": {
+   "name": "Pontoon Dock",
+   "lat": 51.502212,
+   "lon": 0.032115,
+   "zone": "3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLPOP": {
+   "name": "Poplar",
+   "lat": 51.507744,
+   "lon": -0.017384,
+   "zone": "2",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLPRE": {
+   "name": "Prince Regent",
+   "lat": 51.509263,
+   "lon": 0.034158,
+   "zone": "3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLPUD": {
+   "name": "Pudding Mill Lane",
+   "lat": 51.534302,
+   "lon": -0.012755,
+   "zone": "2/3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLRAL": {
+   "name": "Royal Albert",
+   "lat": 51.508357,
+   "lon": 0.045935,
+   "zone": "3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLSHS": {
+   "name": "Stratford High Street",
+   "lat": 51.538196,
+   "lon": -0.001078,
+   "zone": "2/3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLSIT": {
+   "name": "Stratford International",
+   "lat": 51.545265,
+   "lon": -0.009638,
+   "zone": "2/3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLSOQ": {
+   "name": "South Quay",
+   "lat": 51.50005,
+   "lon": -0.015975,
+   "zone": "2",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLSTL": {
+   "name": "Star Lane",
+   "lat": 51.520786,
+   "lon": 0.004156,
+   "zone": "2/3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLWFE": {
+   "name": "Westferry",
+   "lat": 51.509431,
+   "lon": -0.02675,
+   "zone": "2",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLWIQ": {
+   "name": "West India Quay",
+   "lat": 51.50703,
+   "lon": -0.020311,
+   "zone": "2",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZDLWSV": {
+   "name": "West Silvertown",
+   "lat": 51.502838,
+   "lon": 0.02246,
+   "zone": "3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "940GZZLUACT": {
+   "name": "Acton Town",
+   "lat": 51.503057,
+   "lon": -0.280462,
+   "zone": "3",
+   "lines": [
+    "district",
+    "piccadilly"
+   ]
+  },
+  "940GZZLUACY": {
+   "name": "Archway",
+   "lat": 51.565478,
+   "lon": -0.134819,
+   "zone": "2+3",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUADE": {
+   "name": "Aldgate East",
+   "lat": 51.515037,
+   "lon": -0.072384,
+   "zone": "1",
+   "lines": [
+    "district",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLUAGL": {
+   "name": "Angel",
+   "lat": 51.53184,
+   "lon": -0.10635,
+   "zone": "1",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUALD": {
+   "name": "Aldgate",
+   "lat": 51.514246,
+   "lon": -0.075689,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "metropolitan"
+   ]
+  },
+  "940GZZLUALP": {
+   "name": "Alperton",
+   "lat": 51.540627,
+   "lon": -0.29961,
+   "zone": "4",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUASG": {
+   "name": "Arnos Grove",
+   "lat": 51.616446,
+   "lon": -0.133062,
+   "zone": "4",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUASL": {
+   "name": "Arsenal",
+   "lat": 51.558655,
+   "lon": -0.107457,
+   "zone": "2",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUBBB": {
+   "name": "Bromley-by-Bow",
+   "lat": 51.524839,
+   "lon": -0.011538,
+   "zone": "2/3",
+   "lines": [
+    "district",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLUBBN": {
+   "name": "Barbican",
+   "lat": 51.520275,
+   "lon": -0.097993,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "hammersmith-city",
+    "metropolitan"
+   ]
+  },
+  "940GZZLUBDS": {
+   "name": "Bounds Green",
+   "lat": 51.607034,
+   "lon": -0.124235,
+   "zone": "3+4",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUBEC": {
+   "name": "Becontree",
+   "lat": 51.540331,
+   "lon": 0.127016,
+   "zone": "5",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUBKE": {
+   "name": "Barkingside",
+   "lat": 51.585689,
+   "lon": 0.088585,
+   "zone": "4",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUBKH": {
+   "name": "Buckhurst Hill",
+   "lat": 51.626605,
+   "lon": 0.046757,
+   "zone": "5",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUBLG": {
+   "name": "Bethnal Green",
+   "lat": 51.527222,
+   "lon": -0.055506,
+   "zone": "2",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUBMY": {
+   "name": "Bermondsey",
+   "lat": 51.49775,
+   "lon": -0.063993,
+   "zone": "2",
+   "lines": [
+    "jubilee"
+   ]
+  },
+  "940GZZLUBOR": {
+   "name": "Borough",
+   "lat": 51.501199,
+   "lon": -0.09337,
+   "zone": "1",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUBOS": {
+   "name": "Boston Manor",
+   "lat": 51.495635,
+   "lon": -0.324939,
+   "zone": "4",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUBSC": {
+   "name": "Barons Court",
+   "lat": 51.490311,
+   "lon": -0.213427,
+   "zone": "2",
+   "lines": [
+    "district",
+    "piccadilly"
+   ]
+  },
+  "940GZZLUBST": {
+   "name": "Baker Street",
+   "lat": 51.522883,
+   "lon": -0.15713,
+   "zone": "1",
+   "lines": [
+    "bakerloo",
+    "circle",
+    "hammersmith-city",
+    "jubilee",
+    "metropolitan"
+   ]
+  },
+  "940GZZLUBTK": {
+   "name": "Burnt Oak",
+   "lat": 51.602774,
+   "lon": -0.264048,
+   "zone": "4",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUBTX": {
+   "name": "Brent Cross",
+   "lat": 51.57665,
+   "lon": -0.213622,
+   "zone": "3",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUBWR": {
+   "name": "Bow Road",
+   "lat": 51.52694,
+   "lon": -0.025128,
+   "zone": "2",
+   "lines": [
+    "district",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLUBWT": {
+   "name": "Bayswater",
+   "lat": 51.512284,
+   "lon": -0.187938,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "district"
+   ]
+  },
+  "940GZZLUBZP": {
+   "name": "Belsize Park",
+   "lat": 51.550311,
+   "lon": -0.164648,
+   "zone": "2",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUCAR": {
+   "name": "Caledonian Road",
+   "lat": 51.548519,
+   "lon": -0.118493,
+   "zone": "2",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUCFM": {
+   "name": "Chalk Farm",
+   "lat": 51.544118,
+   "lon": -0.153388,
+   "zone": "2",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUCGN": {
+   "name": "Covent Garden",
+   "lat": 51.513093,
+   "lon": -0.124436,
+   "zone": "1",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUCHL": {
+   "name": "Chancery Lane",
+   "lat": 51.518247,
+   "lon": -0.111583,
+   "zone": "1",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUCKS": {
+   "name": "Cockfosters",
+   "lat": 51.65152,
+   "lon": -0.149171,
+   "zone": "5",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUCND": {
+   "name": "Colindale",
+   "lat": 51.595424,
+   "lon": -0.249919,
+   "zone": "4",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUCPC": {
+   "name": "Clapham Common",
+   "lat": 51.461742,
+   "lon": -0.138317,
+   "zone": "2",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUCPK": {
+   "name": "Canons Park",
+   "lat": 51.607701,
+   "lon": -0.294693,
+   "zone": "5",
+   "lines": [
+    "jubilee"
+   ]
+  },
+  "940GZZLUCPN": {
+   "name": "Clapham North",
+   "lat": 51.465135,
+   "lon": -0.130016,
+   "zone": "2",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUCPS": {
+   "name": "Clapham South",
+   "lat": 51.452654,
+   "lon": -0.147582,
+   "zone": "2+3",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUCSD": {
+   "name": "Colliers Wood",
+   "lat": 51.41816,
+   "lon": -0.178086,
+   "zone": "3",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUCSM": {
+   "name": "Chesham",
+   "lat": 51.705208,
+   "lon": -0.611247,
+   "zone": "9",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "940GZZLUCTN": {
+   "name": "Camden Town",
+   "lat": 51.539292,
+   "lon": -0.14274,
+   "zone": "2",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUCWL": {
+   "name": "Chigwell",
+   "lat": 51.617916,
+   "lon": 0.075041,
+   "zone": "4",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUCWP": {
+   "name": "Chiswick Park",
+   "lat": 51.494627,
+   "lon": -0.267972,
+   "zone": "3",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUCXY": {
+   "name": "Croxley",
+   "lat": 51.647044,
+   "lon": -0.441718,
+   "zone": "7",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "940GZZLUDBN": {
+   "name": "Debden",
+   "lat": 51.645386,
+   "lon": 0.083782,
+   "zone": "6",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUDGE": {
+   "name": "Dagenham East",
+   "lat": 51.544096,
+   "lon": 0.166017,
+   "zone": "5",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUDGY": {
+   "name": "Dagenham Heathway",
+   "lat": 51.541639,
+   "lon": 0.147527,
+   "zone": "5",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUDOH": {
+   "name": "Dollis Hill",
+   "lat": 51.551955,
+   "lon": -0.239068,
+   "zone": "3",
+   "lines": [
+    "jubilee"
+   ]
+  },
+  "940GZZLUEAE": {
+   "name": "Eastcote",
+   "lat": 51.576506,
+   "lon": -0.397373,
+   "zone": "5",
+   "lines": [
+    "metropolitan",
+    "piccadilly"
+   ]
+  },
+  "940GZZLUEAN": {
+   "name": "East Acton",
+   "lat": 51.516612,
+   "lon": -0.247248,
+   "zone": "2",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUECM": {
+   "name": "Ealing Common",
+   "lat": 51.51014,
+   "lon": -0.288265,
+   "zone": "3",
+   "lines": [
+    "district",
+    "piccadilly"
+   ]
+  },
+  "940GZZLUECT": {
+   "name": "Earl's Court",
+   "lat": 51.492063,
+   "lon": -0.193378,
+   "zone": "1+2",
+   "lines": [
+    "district",
+    "piccadilly"
+   ]
+  },
+  "940GZZLUEFY": {
+   "name": "East Finchley",
+   "lat": 51.587131,
+   "lon": -0.165012,
+   "zone": "3",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUEGW": {
+   "name": "Edgware",
+   "lat": 51.613653,
+   "lon": -0.274928,
+   "zone": "5",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUEHM": {
+   "name": "East Ham",
+   "lat": 51.538948,
+   "lon": 0.051186,
+   "zone": "3+4",
+   "lines": [
+    "district",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLUEMB": {
+   "name": "Embankment",
+   "lat": 51.507058,
+   "lon": -0.122666,
+   "zone": "1",
+   "lines": [
+    "bakerloo",
+    "circle",
+    "district",
+    "northern"
+   ]
+  },
+  "940GZZLUEPG": {
+   "name": "Epping",
+   "lat": 51.69368,
+   "lon": 0.113767,
+   "zone": "6",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUEPK": {
+   "name": "Elm Park",
+   "lat": 51.549775,
+   "lon": 0.19864,
+   "zone": "6",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUEPY": {
+   "name": "East Putney",
+   "lat": 51.459205,
+   "lon": -0.211,
+   "zone": "2+3",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUERB": {
+   "name": "Edgware Road (Bakerloo)",
+   "lat": 51.520299,
+   "lon": -0.17015,
+   "zone": "1",
+   "lines": [
+    "bakerloo"
+   ]
+  },
+  "940GZZLUERC": {
+   "name": "Edgware Road (Circle Line)",
+   "lat": 51.519858,
+   "lon": -0.167832,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "district",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLUESQ": {
+   "name": "Euston Square",
+   "lat": 51.525604,
+   "lon": -0.135829,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "hammersmith-city",
+    "metropolitan"
+   ]
+  },
+  "940GZZLUFBY": {
+   "name": "Fulham Broadway",
+   "lat": 51.480081,
+   "lon": -0.195422,
+   "zone": "2",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUFLP": {
+   "name": "Fairlop",
+   "lat": 51.595618,
+   "lon": 0.091004,
+   "zone": "4",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUFYC": {
+   "name": "Finchley Central",
+   "lat": 51.600921,
+   "lon": -0.192527,
+   "zone": "4",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUFYR": {
+   "name": "Finchley Road",
+   "lat": 51.546825,
+   "lon": -0.179845,
+   "zone": "2",
+   "lines": [
+    "jubilee",
+    "metropolitan"
+   ]
+  },
+  "940GZZLUGDG": {
+   "name": "Goodge Street",
+   "lat": 51.520599,
+   "lon": -0.134361,
+   "zone": "1",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUGGH": {
+   "name": "Grange Hill",
+   "lat": 51.613378,
+   "lon": 0.092066,
+   "zone": "4",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUGGN": {
+   "name": "Golders Green",
+   "lat": 51.572259,
+   "lon": -0.194039,
+   "zone": "3",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUGHK": {
+   "name": "Goldhawk Road",
+   "lat": 51.502005,
+   "lon": -0.226715,
+   "zone": "2",
+   "lines": [
+    "circle",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLUGPK": {
+   "name": "Green Park",
+   "lat": 51.506947,
+   "lon": -0.142787,
+   "zone": "1",
+   "lines": [
+    "jubilee",
+    "piccadilly",
+    "victoria"
+   ]
+  },
+  "940GZZLUGPS": {
+   "name": "Great Portland Street",
+   "lat": 51.52384,
+   "lon": -0.144262,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "hammersmith-city",
+    "metropolitan"
+   ]
+  },
+  "940GZZLUGTH": {
+   "name": "Gants Hill",
+   "lat": 51.576544,
+   "lon": 0.066185,
+   "zone": "4",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUGTR": {
+   "name": "Gloucester Road",
+   "lat": 51.494316,
+   "lon": -0.182658,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "district",
+    "piccadilly"
+   ]
+  },
+  "940GZZLUHBN": {
+   "name": "Holborn",
+   "lat": 51.51758,
+   "lon": -0.120475,
+   "zone": "1",
+   "lines": [
+    "central",
+    "piccadilly"
+   ]
+  },
+  "940GZZLUHBT": {
+   "name": "High Barnet",
+   "lat": 51.650541,
+   "lon": -0.194298,
+   "zone": "5",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUHCH": {
+   "name": "Hornchurch",
+   "lat": 51.554093,
+   "lon": 0.219116,
+   "zone": "6",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUHCL": {
+   "name": "Hendon Central",
+   "lat": 51.583301,
+   "lon": -0.226424,
+   "zone": "3+4",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUHGD": {
+   "name": "Hillingdon",
+   "lat": 51.553715,
+   "lon": -0.449828,
+   "zone": "6",
+   "lines": [
+    "metropolitan",
+    "piccadilly"
+   ]
+  },
+  "940GZZLUHGR": {
+   "name": "Hanger Lane",
+   "lat": 51.530177,
+   "lon": -0.292704,
+   "zone": "3",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUHGT": {
+   "name": "Highgate",
+   "lat": 51.577532,
+   "lon": -0.145857,
+   "zone": "3",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUHLT": {
+   "name": "Hainault",
+   "lat": 51.603659,
+   "lon": 0.093482,
+   "zone": "4",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUHNX": {
+   "name": "Hatton Cross",
+   "lat": 51.466747,
+   "lon": -0.423191,
+   "zone": "5+6",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUHPC": {
+   "name": "Hyde Park Corner",
+   "lat": 51.503035,
+   "lon": -0.152441,
+   "zone": "1",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUHPK": {
+   "name": "Holland Park",
+   "lat": 51.507143,
+   "lon": -0.205679,
+   "zone": "2",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUHSK": {
+   "name": "High Street Kensington",
+   "lat": 51.501055,
+   "lon": -0.192792,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "district"
+   ]
+  },
+  "940GZZLUHTD": {
+   "name": "Hampstead",
+   "lat": 51.556239,
+   "lon": -0.177464,
+   "zone": "2+3",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUHWC": {
+   "name": "Hounslow Central",
+   "lat": 51.471295,
+   "lon": -0.366578,
+   "zone": "4",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUHWE": {
+   "name": "Hounslow East",
+   "lat": 51.473213,
+   "lon": -0.356474,
+   "zone": "4",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUHWT": {
+   "name": "Hounslow West",
+   "lat": 51.473469,
+   "lon": -0.386544,
+   "zone": "5",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUHWY": {
+   "name": "Holloway Road",
+   "lat": 51.552697,
+   "lon": -0.113244,
+   "zone": "2",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUICK": {
+   "name": "Ickenham",
+   "lat": 51.56177,
+   "lon": -0.442225,
+   "zone": "6",
+   "lines": [
+    "metropolitan",
+    "piccadilly"
+   ]
+  },
+  "940GZZLUKBN": {
+   "name": "Kilburn",
+   "lat": 51.547183,
+   "lon": -0.204248,
+   "zone": "2",
+   "lines": [
+    "jubilee"
+   ]
+  },
+  "940GZZLUKBY": {
+   "name": "Kingsbury",
+   "lat": 51.584845,
+   "lon": -0.27879,
+   "zone": "4",
+   "lines": [
+    "jubilee"
+   ]
+  },
+  "940GZZLUKNB": {
+   "name": "Knightsbridge",
+   "lat": 51.501669,
+   "lon": -0.160508,
+   "zone": "1",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUKNG": {
+   "name": "Kennington",
+   "lat": 51.488337,
+   "lon": -0.105963,
+   "zone": "1+2",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUKPK": {
+   "name": "Kilburn Park",
+   "lat": 51.534979,
+   "lon": -0.194232,
+   "zone": "2",
+   "lines": [
+    "bakerloo"
+   ]
+  },
+  "940GZZLULAD": {
+   "name": "Ladbroke Grove",
+   "lat": 51.517449,
+   "lon": -0.210391,
+   "zone": "2",
+   "lines": [
+    "circle",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLULBN": {
+   "name": "Lambeth North",
+   "lat": 51.498808,
+   "lon": -0.112315,
+   "zone": "1",
+   "lines": [
+    "bakerloo"
+   ]
+  },
+  "940GZZLULGN": {
+   "name": "Loughton",
+   "lat": 51.641443,
+   "lon": 0.055476,
+   "zone": "6",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLULGT": {
+   "name": "Lancaster Gate",
+   "lat": 51.511723,
+   "lon": -0.175494,
+   "zone": "1",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLULRD": {
+   "name": "Latimer Road",
+   "lat": 51.513389,
+   "lon": -0.217799,
+   "zone": "2",
+   "lines": [
+    "circle",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLULSQ": {
+   "name": "Leicester Square",
+   "lat": 51.511386,
+   "lon": -0.128426,
+   "zone": "1",
+   "lines": [
+    "northern",
+    "piccadilly"
+   ]
+  },
+  "940GZZLULYN": {
+   "name": "Leyton",
+   "lat": 51.556589,
+   "lon": -0.005523,
+   "zone": "3",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLULYS": {
+   "name": "Leytonstone",
+   "lat": 51.568324,
+   "lon": 0.008194,
+   "zone": "3+4",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUMBA": {
+   "name": "Marble Arch",
+   "lat": 51.513424,
+   "lon": -0.158953,
+   "zone": "1",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUMDN": {
+   "name": "Morden",
+   "lat": 51.402142,
+   "lon": -0.194839,
+   "zone": "4",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUMED": {
+   "name": "Mile End",
+   "lat": 51.525122,
+   "lon": -0.03364,
+   "zone": "2",
+   "lines": [
+    "central",
+    "district",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLUMHL": {
+   "name": "Mill Hill East",
+   "lat": 51.608229,
+   "lon": -0.209986,
+   "zone": "4",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUMMT": {
+   "name": "Monument",
+   "lat": 51.5107,
+   "lon": -0.085969,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "district"
+   ]
+  },
+  "940GZZLUMPK": {
+   "name": "Moor Park",
+   "lat": 51.629845,
+   "lon": -0.432454,
+   "zone": "6+7",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "940GZZLUMRH": {
+   "name": "Manor House",
+   "lat": 51.570738,
+   "lon": -0.096118,
+   "zone": "2+3",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUMSH": {
+   "name": "Mansion House",
+   "lat": 51.512117,
+   "lon": -0.094009,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "district"
+   ]
+  },
+  "940GZZLUMTC": {
+   "name": "Mornington Crescent",
+   "lat": 51.534679,
+   "lon": -0.138789,
+   "zone": "2",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUMVL": {
+   "name": "Maida Vale",
+   "lat": 51.529777,
+   "lon": -0.185758,
+   "zone": "2",
+   "lines": [
+    "bakerloo"
+   ]
+  },
+  "940GZZLUNAN": {
+   "name": "North Acton",
+   "lat": 51.523524,
+   "lon": -0.259755,
+   "zone": "2+3",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUNBP": {
+   "name": "Newbury Park",
+   "lat": 51.575726,
+   "lon": 0.090004,
+   "zone": "4",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUNDN": {
+   "name": "Neasden",
+   "lat": 51.553986,
+   "lon": -0.249837,
+   "zone": "3",
+   "lines": [
+    "jubilee"
+   ]
+  },
+  "940GZZLUNEN": {
+   "name": "North Ealing",
+   "lat": 51.517505,
+   "lon": -0.288868,
+   "zone": "3",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUNFD": {
+   "name": "Northfields",
+   "lat": 51.499319,
+   "lon": -0.314719,
+   "zone": "3",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUNHA": {
+   "name": "North Harrow",
+   "lat": 51.584872,
+   "lon": -0.362408,
+   "zone": "5",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "940GZZLUNHG": {
+   "name": "Notting Hill Gate",
+   "lat": 51.509128,
+   "lon": -0.196104,
+   "zone": "1+2",
+   "lines": [
+    "central",
+    "circle",
+    "district"
+   ]
+  },
+  "940GZZLUNHT": {
+   "name": "Northolt",
+   "lat": 51.548236,
+   "lon": -0.368699,
+   "zone": "5",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUNKP": {
+   "name": "Northwick Park",
+   "lat": 51.578481,
+   "lon": -0.318056,
+   "zone": "4",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "940GZZLUNOW": {
+   "name": "Northwood",
+   "lat": 51.611053,
+   "lon": -0.423829,
+   "zone": "6",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "940GZZLUNWH": {
+   "name": "Northwood Hills",
+   "lat": 51.600572,
+   "lon": -0.409464,
+   "zone": "6",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "940GZZLUOAK": {
+   "name": "Oakwood",
+   "lat": 51.647726,
+   "lon": -0.132182,
+   "zone": "5",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUOSY": {
+   "name": "Osterley",
+   "lat": 51.481274,
+   "lon": -0.352224,
+   "zone": "4",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUOVL": {
+   "name": "Oval",
+   "lat": 51.48185,
+   "lon": -0.112439,
+   "zone": "2",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUOXC": {
+   "name": "Oxford Circus",
+   "lat": 51.515224,
+   "lon": -0.141903,
+   "zone": "1",
+   "lines": [
+    "bakerloo",
+    "central",
+    "victoria"
+   ]
+  },
+  "940GZZLUPCC": {
+   "name": "Piccadilly Circus",
+   "lat": 51.51005,
+   "lon": -0.133798,
+   "zone": "1",
+   "lines": [
+    "bakerloo",
+    "piccadilly"
+   ]
+  },
+  "940GZZLUPCO": {
+   "name": "Pimlico",
+   "lat": 51.489097,
+   "lon": -0.133761,
+   "zone": "1",
+   "lines": [
+    "victoria"
+   ]
+  },
+  "940GZZLUPKR": {
+   "name": "Park Royal",
+   "lat": 51.527123,
+   "lon": -0.284341,
+   "zone": "3",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUPLW": {
+   "name": "Plaistow",
+   "lat": 51.531341,
+   "lon": 0.017451,
+   "zone": "3",
+   "lines": [
+    "district",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLUPNR": {
+   "name": "Pinner",
+   "lat": 51.592901,
+   "lon": -0.381161,
+   "zone": "5",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "940GZZLUPRD": {
+   "name": "Preston Road",
+   "lat": 51.571972,
+   "lon": -0.295107,
+   "zone": "4",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "940GZZLUPSG": {
+   "name": "Parsons Green",
+   "lat": 51.475277,
+   "lon": -0.20117,
+   "zone": "2",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUPVL": {
+   "name": "Perivale",
+   "lat": 51.536717,
+   "lon": -0.323446,
+   "zone": "4",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUPYB": {
+   "name": "Putney Bridge",
+   "lat": 51.468262,
+   "lon": -0.208731,
+   "zone": "2",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUQBY": {
+   "name": "Queensbury",
+   "lat": 51.594188,
+   "lon": -0.286219,
+   "zone": "4",
+   "lines": [
+    "jubilee"
+   ]
+  },
+  "940GZZLUQWY": {
+   "name": "Queensway",
+   "lat": 51.510312,
+   "lon": -0.187152,
+   "zone": "1",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLURBG": {
+   "name": "Redbridge",
+   "lat": 51.576243,
+   "lon": 0.04536,
+   "zone": "4",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLURGP": {
+   "name": "Regent's Park",
+   "lat": 51.523344,
+   "lon": -0.146444,
+   "zone": "1",
+   "lines": [
+    "bakerloo"
+   ]
+  },
+  "940GZZLURSG": {
+   "name": "Ruislip Gardens",
+   "lat": 51.560736,
+   "lon": -0.41071,
+   "zone": "5",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLURSM": {
+   "name": "Ruislip Manor",
+   "lat": 51.573202,
+   "lon": -0.412973,
+   "zone": "6",
+   "lines": [
+    "metropolitan",
+    "piccadilly"
+   ]
+  },
+  "940GZZLURSP": {
+   "name": "Ruislip",
+   "lat": 51.571354,
+   "lon": -0.421898,
+   "zone": "6",
+   "lines": [
+    "metropolitan",
+    "piccadilly"
+   ]
+  },
+  "940GZZLURSQ": {
+   "name": "Russell Square",
+   "lat": 51.523073,
+   "lon": -0.124285,
+   "zone": "1",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLURVP": {
+   "name": "Ravenscourt Park",
+   "lat": 51.494122,
+   "lon": -0.235881,
+   "zone": "2",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLURVY": {
+   "name": "Roding Valley",
+   "lat": 51.617199,
+   "lon": 0.043647,
+   "zone": "4",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLURYL": {
+   "name": "Rayners Lane",
+   "lat": 51.575147,
+   "lon": -0.371127,
+   "zone": "5",
+   "lines": [
+    "metropolitan",
+    "piccadilly"
+   ]
+  },
+  "940GZZLURYO": {
+   "name": "Royal Oak",
+   "lat": 51.519113,
+   "lon": -0.188748,
+   "zone": "2",
+   "lines": [
+    "circle",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLUSBM": {
+   "name": "Shepherd's Bush Market",
+   "lat": 51.505579,
+   "lon": -0.226375,
+   "zone": "2",
+   "lines": [
+    "circle",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLUSEA": {
+   "name": "South Ealing",
+   "lat": 51.501003,
+   "lon": -0.307424,
+   "zone": "3",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUSFB": {
+   "name": "Stamford Brook",
+   "lat": 51.494917,
+   "lon": -0.245704,
+   "zone": "2",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUSFS": {
+   "name": "Southfields",
+   "lat": 51.445073,
+   "lon": -0.206602,
+   "zone": "3",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUSGN": {
+   "name": "Stepney Green",
+   "lat": 51.521858,
+   "lon": -0.046596,
+   "zone": "2",
+   "lines": [
+    "district",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLUSGT": {
+   "name": "Southgate",
+   "lat": 51.632315,
+   "lon": -0.127816,
+   "zone": "4",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUSHH": {
+   "name": "South Harrow",
+   "lat": 51.564888,
+   "lon": -0.352492,
+   "zone": "5",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUSJP": {
+   "name": "St. James's Park",
+   "lat": 51.499544,
+   "lon": -0.133608,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "district"
+   ]
+  },
+  "940GZZLUSJW": {
+   "name": "St. John's Wood",
+   "lat": 51.534521,
+   "lon": -0.173948,
+   "zone": "2",
+   "lines": [
+    "jubilee"
+   ]
+  },
+  "940GZZLUSKS": {
+   "name": "South Kensington",
+   "lat": 51.494094,
+   "lon": -0.174138,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "district",
+    "piccadilly"
+   ]
+  },
+  "940GZZLUSKW": {
+   "name": "Stockwell",
+   "lat": 51.472184,
+   "lon": -0.122644,
+   "zone": "2",
+   "lines": [
+    "northern",
+    "victoria"
+   ]
+  },
+  "940GZZLUSNB": {
+   "name": "Snaresbrook",
+   "lat": 51.580678,
+   "lon": 0.02144,
+   "zone": "4",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUSPU": {
+   "name": "St. Paul's",
+   "lat": 51.514936,
+   "lon": -0.097567,
+   "zone": "1",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUSSQ": {
+   "name": "Sloane Square",
+   "lat": 51.49227,
+   "lon": -0.156377,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "district"
+   ]
+  },
+  "940GZZLUSTM": {
+   "name": "Stanmore",
+   "lat": 51.619839,
+   "lon": -0.303266,
+   "zone": "5",
+   "lines": [
+    "jubilee"
+   ]
+  },
+  "940GZZLUSUH": {
+   "name": "Sudbury Hill",
+   "lat": 51.556946,
+   "lon": -0.336435,
+   "zone": "4",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUSUT": {
+   "name": "Sudbury Town",
+   "lat": 51.550815,
+   "lon": -0.315745,
+   "zone": "4",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUSWC": {
+   "name": "Swiss Cottage",
+   "lat": 51.543681,
+   "lon": -0.174894,
+   "zone": "2",
+   "lines": [
+    "jubilee"
+   ]
+  },
+  "940GZZLUSWF": {
+   "name": "South Woodford",
+   "lat": 51.591907,
+   "lon": 0.027338,
+   "zone": "4",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUSWK": {
+   "name": "Southwark",
+   "lat": 51.50427,
+   "lon": -0.105331,
+   "zone": "1",
+   "lines": [
+    "jubilee"
+   ]
+  },
+  "940GZZLUSWN": {
+   "name": "South Wimbledon",
+   "lat": 51.415309,
+   "lon": -0.192005,
+   "zone": "3+4",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUTAW": {
+   "name": "Totteridge & Whetstone",
+   "lat": 51.630597,
+   "lon": -0.17921,
+   "zone": "4",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUTBC": {
+   "name": "Tooting Bec",
+   "lat": 51.435678,
+   "lon": -0.159736,
+   "zone": "3",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUTBY": {
+   "name": "Tooting Broadway",
+   "lat": 51.42763,
+   "lon": -0.168374,
+   "zone": "3",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUTFP": {
+   "name": "Tufnell Park",
+   "lat": 51.556822,
+   "lon": -0.138433,
+   "zone": "2",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUTHB": {
+   "name": "Theydon Bois",
+   "lat": 51.671759,
+   "lon": 0.103085,
+   "zone": "6",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUTMP": {
+   "name": "Temple",
+   "lat": 51.511006,
+   "lon": -0.11426,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "district"
+   ]
+  },
+  "940GZZLUTNG": {
+   "name": "Turnham Green",
+   "lat": 51.495148,
+   "lon": -0.254555,
+   "zone": "2+3",
+   "lines": [
+    "district",
+    "piccadilly"
+   ]
+  },
+  "940GZZLUTPN": {
+   "name": "Turnpike Lane",
+   "lat": 51.590272,
+   "lon": -0.102953,
+   "zone": "3",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUTWH": {
+   "name": "Tower Hill",
+   "lat": 51.509971,
+   "lon": -0.076546,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "district"
+   ]
+  },
+  "940GZZLUUPB": {
+   "name": "Upminster Bridge",
+   "lat": 51.55856,
+   "lon": 0.235809,
+   "zone": "6",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUUPK": {
+   "name": "Upton Park",
+   "lat": 51.53534,
+   "lon": 0.035263,
+   "zone": "3",
+   "lines": [
+    "district",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLUUPY": {
+   "name": "Upney",
+   "lat": 51.538372,
+   "lon": 0.10153,
+   "zone": "4",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUUXB": {
+   "name": "Uxbridge",
+   "lat": 51.546565,
+   "lon": -0.477949,
+   "zone": "6",
+   "lines": [
+    "metropolitan",
+    "piccadilly"
+   ]
+  },
+  "940GZZLUWAF": {
+   "name": "Watford",
+   "lat": 51.657446,
+   "lon": -0.417377,
+   "zone": "7",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "940GZZLUWCY": {
+   "name": "White City",
+   "lat": 51.511959,
+   "lon": -0.224297,
+   "zone": "2",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUWFN": {
+   "name": "West Finchley",
+   "lat": 51.609426,
+   "lon": -0.188362,
+   "zone": "4",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUWHW": {
+   "name": "West Harrow",
+   "lat": 51.57971,
+   "lon": -0.3534,
+   "zone": "5",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "940GZZLUWIG": {
+   "name": "Willesden Green",
+   "lat": 51.549146,
+   "lon": -0.221537,
+   "zone": "2+3",
+   "lines": [
+    "jubilee",
+    "metropolitan"
+   ]
+  },
+  "940GZZLUWIP": {
+   "name": "Wimbledon Park",
+   "lat": 51.434573,
+   "lon": -0.199719,
+   "zone": "3",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUWKA": {
+   "name": "Warwick Avenue",
+   "lat": 51.523263,
+   "lon": -0.183783,
+   "zone": "2",
+   "lines": [
+    "bakerloo"
+   ]
+  },
+  "940GZZLUWKN": {
+   "name": "West Kensington",
+   "lat": 51.490459,
+   "lon": -0.206636,
+   "zone": "2",
+   "lines": [
+    "district"
+   ]
+  },
+  "940GZZLUWLA": {
+   "name": "Wood Lane",
+   "lat": 51.509669,
+   "lon": -0.22453,
+   "zone": "2",
+   "lines": [
+    "circle",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLUWOF": {
+   "name": "Woodford",
+   "lat": 51.606899,
+   "lon": 0.03397,
+   "zone": "4",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUWOG": {
+   "name": "Wood Green",
+   "lat": 51.597479,
+   "lon": -0.109886,
+   "zone": "3",
+   "lines": [
+    "piccadilly"
+   ]
+  },
+  "940GZZLUWOP": {
+   "name": "Woodside Park",
+   "lat": 51.618014,
+   "lon": -0.18542,
+   "zone": "4",
+   "lines": [
+    "northern"
+   ]
+  },
+  "940GZZLUWRR": {
+   "name": "Warren Street",
+   "lat": 51.524951,
+   "lon": -0.138321,
+   "zone": "1",
+   "lines": [
+    "northern",
+    "victoria"
+   ]
+  },
+  "940GZZLUWSD": {
+   "name": "Wanstead",
+   "lat": 51.575501,
+   "lon": 0.028527,
+   "zone": "4",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUWSP": {
+   "name": "Westbourne Park",
+   "lat": 51.52111,
+   "lon": -0.201065,
+   "zone": "2",
+   "lines": [
+    "circle",
+    "hammersmith-city"
+   ]
+  },
+  "940GZZLUWTA": {
+   "name": "West Acton",
+   "lat": 51.518001,
+   "lon": -0.28098,
+   "zone": "3",
+   "lines": [
+    "central"
+   ]
+  },
+  "940GZZLUWYP": {
+   "name": "Wembley Park",
+   "lat": 51.563198,
+   "lon": -0.279262,
+   "zone": "4",
+   "lines": [
+    "jubilee",
+    "metropolitan"
+   ]
+  },
+  "940GZZNEUGST": {
+   "name": "Nine Elms",
+   "lat": 51.479912,
+   "lon": -0.128476,
+   "zone": "1",
+   "lines": [
+    "northern"
+   ]
+  },
+  "HUBABW": {
+   "name": "Abbey Wood",
+   "lat": 51.491284,
+   "lon": 0.121087,
+   "zone": "4",
+   "lines": [
+    "elizabeth"
+   ]
+  },
+  "HUBAMR": {
+   "name": "Amersham",
+   "lat": 51.674126,
+   "lon": -0.607714,
+   "zone": "9",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "HUBBAL": {
+   "name": "Balham",
+   "lat": 51.443288,
+   "lon": -0.152997,
+   "zone": "3",
+   "lines": [
+    "northern"
+   ]
+  },
+  "HUBBAN": {
+   "name": "Bank",
+   "lat": 51.513132,
+   "lon": -0.090047,
+   "zone": "1",
+   "lines": [
+    "central",
+    "dlr",
+    "northern",
+    "waterloo-city"
+   ]
+  },
+  "HUBBDS": {
+   "name": "Bond Street",
+   "lat": 51.514304,
+   "lon": -0.149723,
+   "zone": "1",
+   "lines": [
+    "central",
+    "elizabeth",
+    "jubilee"
+   ]
+  },
+  "HUBBFR": {
+   "name": "Blackfriars",
+   "lat": 51.511581,
+   "lon": -0.103659,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "district"
+   ]
+  },
+  "HUBBHO": {
+   "name": "Blackhorse Road",
+   "lat": 51.586919,
+   "lon": -0.04115,
+   "zone": "3",
+   "lines": [
+    "suffragette",
+    "victoria"
+   ]
+  },
+  "HUBBKG": {
+   "name": "Barking",
+   "lat": 51.539321,
+   "lon": 0.081053,
+   "zone": "4",
+   "lines": [
+    "district",
+    "hammersmith-city",
+    "suffragette"
+   ]
+  },
+  "HUBBRX": {
+   "name": "Brixton",
+   "lat": 51.462618,
+   "lon": -0.114888,
+   "zone": "2",
+   "lines": [
+    "victoria"
+   ]
+  },
+  "HUBBSH": {
+   "name": "Bushey",
+   "lat": 51.645691,
+   "lon": -0.385612,
+   "zone": "8",
+   "lines": [
+    "lioness"
+   ]
+  },
+  "HUBCAN": {
+   "name": "Canning Town",
+   "lat": 51.513584,
+   "lon": 0.008322,
+   "zone": "2/3",
+   "lines": [
+    "dlr",
+    "jubilee"
+   ]
+  },
+  "HUBCAW": {
+   "name": "Canary Wharf",
+   "lat": 51.503488,
+   "lon": -0.018246,
+   "zone": "2",
+   "lines": [
+    "dlr",
+    "elizabeth",
+    "jubilee"
+   ]
+  },
+  "HUBCFO": {
+   "name": "Chalfont & Latimer",
+   "lat": 51.667985,
+   "lon": -0.560689,
+   "zone": "8",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "HUBCHX": {
+   "name": "Charing Cross",
+   "lat": 51.50741,
+   "lon": -0.127277,
+   "zone": "1",
+   "lines": [
+    "bakerloo",
+    "northern"
+   ]
+  },
+  "HUBCLJ": {
+   "name": "Clapham Junction",
+   "lat": 51.464187,
+   "lon": -0.170221,
+   "zone": "2",
+   "lines": [
+    "mildmay",
+    "windrush"
+   ]
+  },
+  "HUBCLW": {
+   "name": "Chorleywood",
+   "lat": 51.654358,
+   "lon": -0.518461,
+   "zone": "7",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "HUBCST": {
+   "name": "Cannon Street",
+   "lat": 51.51151,
+   "lon": -0.090432,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "district"
+   ]
+  },
+  "HUBCUS": {
+   "name": "Custom House",
+   "lat": 51.509716,
+   "lon": 0.026699,
+   "zone": "3",
+   "lines": [
+    "dlr",
+    "elizabeth"
+   ]
+  },
+  "HUBCUT": {
+   "name": "Cutty Sark (for Maritime Greenwich)",
+   "lat": 51.481671,
+   "lon": -0.01081,
+   "zone": "2+3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "HUBCYP": {
+   "name": "Crystal Palace",
+   "lat": 51.418109,
+   "lon": -0.07261,
+   "zone": "3+4",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "HUBEAL": {
+   "name": "Ealing Broadway",
+   "lat": 51.515017,
+   "lon": -0.301457,
+   "zone": "3",
+   "lines": [
+    "central",
+    "district",
+    "elizabeth"
+   ]
+  },
+  "HUBEPH": {
+   "name": "Elephant & Castle",
+   "lat": 51.494536,
+   "lon": -0.100606,
+   "zone": "1+2",
+   "lines": [
+    "bakerloo",
+    "northern"
+   ]
+  },
+  "HUBEUS": {
+   "name": "Euston",
+   "lat": 51.527999,
+   "lon": -0.133785,
+   "zone": "1",
+   "lines": [
+    "lioness",
+    "northern",
+    "victoria"
+   ]
+  },
+  "HUBFPK": {
+   "name": "Finsbury Park",
+   "lat": 51.564158,
+   "lon": -0.106825,
+   "zone": "2",
+   "lines": [
+    "piccadilly",
+    "victoria"
+   ]
+  },
+  "HUBGFD": {
+   "name": "Greenford",
+   "lat": 51.542424,
+   "lon": -0.34605,
+   "zone": "4",
+   "lines": [
+    "central"
+   ]
+  },
+  "HUBGNW": {
+   "name": "Greenwich",
+   "lat": 51.478087,
+   "lon": -0.013673,
+   "zone": "2+3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "HUBGUN": {
+   "name": "Gunnersbury",
+   "lat": 51.491803,
+   "lon": -0.275267,
+   "zone": "3",
+   "lines": [
+    "district",
+    "mildmay"
+   ]
+  },
+  "HUBH13": {
+   "name": "Heathrow Terminals 2 & 3",
+   "lat": 51.471235,
+   "lon": -0.452265,
+   "zone": "6",
+   "lines": [
+    "elizabeth",
+    "piccadilly"
+   ]
+  },
+  "HUBHDN": {
+   "name": "Harlesden",
+   "lat": 51.53631,
+   "lon": -0.257883,
+   "zone": "3",
+   "lines": [
+    "bakerloo",
+    "lioness"
+   ]
+  },
+  "HUBHHY": {
+   "name": "Highbury & Islington",
+   "lat": 51.54635,
+   "lon": -0.103324,
+   "zone": "2",
+   "lines": [
+    "mildmay",
+    "victoria",
+    "windrush"
+   ]
+  },
+  "HUBHMS": {
+   "name": "Hammersmith (H&C Line)",
+   "lat": 51.49339,
+   "lon": -0.22503,
+   "zone": "2",
+   "lines": [
+    "circle",
+    "district",
+    "hammersmith-city",
+    "piccadilly"
+   ]
+  },
+  "HUBHOH": {
+   "name": "Harrow-on-the-Hill",
+   "lat": 51.579195,
+   "lon": -0.337225,
+   "zone": "5",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "HUBHRW": {
+   "name": "Harrow & Wealdstone",
+   "lat": 51.592268,
+   "lon": -0.335217,
+   "zone": "5",
+   "lines": [
+    "bakerloo",
+    "lioness"
+   ]
+  },
+  "HUBHX4": {
+   "name": "Heathrow Terminal 4",
+   "lat": 51.458524,
+   "lon": -0.445771,
+   "zone": "6",
+   "lines": [
+    "elizabeth",
+    "piccadilly"
+   ]
+  },
+  "HUBHX5": {
+   "name": "Heathrow Terminal 5",
+   "lat": 51.470052,
+   "lon": -0.49056,
+   "zone": "6",
+   "lines": [
+    "elizabeth",
+    "piccadilly"
+   ]
+  },
+  "HUBIMP": {
+   "name": "Imperial Wharf",
+   "lat": 51.474949,
+   "lon": -0.182823,
+   "zone": "2",
+   "lines": [
+    "mildmay"
+   ]
+  },
+  "HUBKGX": {
+   "name": "King's Cross St. Pancras",
+   "lat": 51.530663,
+   "lon": -0.123194,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "hammersmith-city",
+    "metropolitan",
+    "northern",
+    "piccadilly",
+    "victoria"
+   ]
+  },
+  "HUBKNL": {
+   "name": "Kensal Green",
+   "lat": 51.530539,
+   "lon": -0.225016,
+   "zone": "2",
+   "lines": [
+    "bakerloo",
+    "lioness"
+   ]
+  },
+  "HUBKNT": {
+   "name": "Kenton",
+   "lat": 51.581756,
+   "lon": -0.31691,
+   "zone": "4",
+   "lines": [
+    "bakerloo",
+    "lioness"
+   ]
+  },
+  "HUBKPA": {
+   "name": "Kensington (Olympia)",
+   "lat": 51.497624,
+   "lon": -0.210015,
+   "zone": "2",
+   "lines": [
+    "district",
+    "mildmay"
+   ]
+  },
+  "HUBKTN": {
+   "name": "Kentish Town",
+   "lat": 51.550312,
+   "lon": -0.140733,
+   "zone": "2",
+   "lines": [
+    "northern"
+   ]
+  },
+  "HUBKWG": {
+   "name": "Kew Gardens",
+   "lat": 51.477058,
+   "lon": -0.285241,
+   "zone": "3+4",
+   "lines": [
+    "district",
+    "mildmay"
+   ]
+  },
+  "HUBLBG": {
+   "name": "London Bridge",
+   "lat": 51.505721,
+   "lon": -0.088873,
+   "zone": "1",
+   "lines": [
+    "jubilee",
+    "northern"
+   ]
+  },
+  "HUBLCY": {
+   "name": "London City Airport",
+   "lat": 51.503416,
+   "lon": 0.048739,
+   "zone": "3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "HUBLEW": {
+   "name": "Lewisham",
+   "lat": 51.464665,
+   "lon": -0.012874,
+   "zone": "2+3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "HUBLHS": {
+   "name": "Limehouse",
+   "lat": 51.512393,
+   "lon": -0.039809,
+   "zone": "2",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "HUBLST": {
+   "name": "Liverpool Street",
+   "lat": 51.517372,
+   "lon": -0.083182,
+   "zone": "1",
+   "lines": [
+    "central",
+    "circle",
+    "elizabeth",
+    "hammersmith-city",
+    "metropolitan",
+    "weaver"
+   ]
+  },
+  "HUBMYB": {
+   "name": "Marylebone",
+   "lat": 51.522322,
+   "lon": -0.163207,
+   "zone": "1",
+   "lines": [
+    "bakerloo"
+   ]
+  },
+  "HUBNGW": {
+   "name": "North Greenwich",
+   "lat": 51.50047,
+   "lon": 0.004287,
+   "zone": "2/3",
+   "lines": [
+    "jubilee"
+   ]
+  },
+  "HUBNWB": {
+   "name": "North Wembley",
+   "lat": 51.562551,
+   "lon": -0.304,
+   "zone": "4",
+   "lines": [
+    "bakerloo",
+    "lioness"
+   ]
+  },
+  "HUBNWD": {
+   "name": "Norwood Junction",
+   "lat": 51.397019,
+   "lon": -0.075221,
+   "zone": "4",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "HUBNWX": {
+   "name": "New Cross ELL",
+   "lat": 51.476344,
+   "lon": -0.032441,
+   "zone": "2",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "HUBNXG": {
+   "name": "New Cross Gate",
+   "lat": 51.475128,
+   "lon": -0.040399,
+   "zone": "2",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "HUBOLD": {
+   "name": "Old Street",
+   "lat": 51.525864,
+   "lon": -0.08777,
+   "zone": "1",
+   "lines": [
+    "northern"
+   ]
+  },
+  "HUBPAD": {
+   "name": "Paddington",
+   "lat": 51.516581,
+   "lon": -0.175689,
+   "zone": "1",
+   "lines": [
+    "bakerloo",
+    "circle",
+    "district",
+    "elizabeth",
+    "hammersmith-city"
+   ]
+  },
+  "HUBQPW": {
+   "name": "Queen's Park",
+   "lat": 51.534158,
+   "lon": -0.204574,
+   "zone": "2",
+   "lines": [
+    "bakerloo",
+    "lioness"
+   ]
+  },
+  "HUBRIC": {
+   "name": "Rickmansworth",
+   "lat": 51.640207,
+   "lon": -0.473703,
+   "zone": "7",
+   "lines": [
+    "metropolitan"
+   ]
+  },
+  "HUBRMD": {
+   "name": "Richmond",
+   "lat": 51.463237,
+   "lon": -0.301336,
+   "zone": "4",
+   "lines": [
+    "district",
+    "mildmay"
+   ]
+  },
+  "HUBRVC": {
+   "name": "Royal Victoria",
+   "lat": 51.509336,
+   "lon": 0.018497,
+   "zone": "3",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "HUBSBP": {
+   "name": "Stonebridge Park",
+   "lat": 51.543959,
+   "lon": -0.275892,
+   "zone": "3",
+   "lines": [
+    "bakerloo",
+    "lioness"
+   ]
+  },
+  "HUBSDE": {
+   "name": "Shadwell",
+   "lat": 51.511284,
+   "lon": -0.056934,
+   "zone": "2",
+   "lines": [
+    "dlr",
+    "windrush"
+   ]
+  },
+  "HUBSOK": {
+   "name": "South Kenton",
+   "lat": 51.570232,
+   "lon": -0.308433,
+   "zone": "4",
+   "lines": [
+    "bakerloo",
+    "lioness"
+   ]
+  },
+  "HUBSPB": {
+   "name": "Shepherds Bush",
+   "lat": 51.504376,
+   "lon": -0.218813,
+   "zone": "2",
+   "lines": [
+    "central",
+    "mildmay"
+   ]
+  },
+  "HUBSRA": {
+   "name": "Stratford",
+   "lat": 51.541806,
+   "lon": -0.003458,
+   "zone": "2/3",
+   "lines": [
+    "central",
+    "dlr",
+    "elizabeth",
+    "jubilee",
+    "mildmay"
+   ]
+  },
+  "HUBSRU": {
+   "name": "South Ruislip",
+   "lat": 51.556853,
+   "lon": -0.398915,
+   "zone": "5",
+   "lines": [
+    "central"
+   ]
+  },
+  "HUBSVS": {
+   "name": "Seven Sisters",
+   "lat": 51.58333,
+   "lon": -0.072584,
+   "zone": "3",
+   "lines": [
+    "victoria",
+    "weaver"
+   ]
+  },
+  "HUBSYD": {
+   "name": "Sydenham",
+   "lat": 51.427248,
+   "lon": -0.054244,
+   "zone": "3",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "HUBTCR": {
+   "name": "Tottenham Court Road",
+   "lat": 51.516426,
+   "lon": -0.13041,
+   "zone": "1",
+   "lines": [
+    "central",
+    "elizabeth",
+    "northern"
+   ]
+  },
+  "HUBTOG": {
+   "name": "Tower Gateway",
+   "lat": 51.510617,
+   "lon": -0.074818,
+   "zone": "1",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "HUBTOM": {
+   "name": "Tottenham Hale",
+   "lat": 51.588108,
+   "lon": -0.060241,
+   "zone": "3",
+   "lines": [
+    "victoria"
+   ]
+  },
+  "HUBUPM": {
+   "name": "Upminster",
+   "lat": 51.559063,
+   "lon": 0.250882,
+   "zone": "6",
+   "lines": [
+    "district",
+    "liberty"
+   ]
+  },
+  "HUBVIC": {
+   "name": "Victoria",
+   "lat": 51.496359,
+   "lon": -0.143102,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "district",
+    "victoria"
+   ]
+  },
+  "HUBVXH": {
+   "name": "Vauxhall",
+   "lat": 51.485743,
+   "lon": -0.124204,
+   "zone": "1+2",
+   "lines": [
+    "victoria"
+   ]
+  },
+  "HUBWAT": {
+   "name": "Waterloo",
+   "lat": 51.503299,
+   "lon": -0.11478,
+   "zone": "1",
+   "lines": [
+    "bakerloo",
+    "jubilee",
+    "northern",
+    "waterloo-city"
+   ]
+  },
+  "HUBWBP": {
+   "name": "West Brompton",
+   "lat": 51.487268,
+   "lon": -0.195599,
+   "zone": "2",
+   "lines": [
+    "district",
+    "mildmay"
+   ]
+  },
+  "HUBWCY": {
+   "name": "West Croydon",
+   "lat": 51.378428,
+   "lon": -0.102585,
+   "zone": "5",
+   "lines": [
+    "windrush"
+   ]
+  },
+  "HUBWEH": {
+   "name": "West Ham",
+   "lat": 51.528136,
+   "lon": 0.005055,
+   "zone": "2/3",
+   "lines": [
+    "district",
+    "dlr",
+    "hammersmith-city",
+    "jubilee"
+   ]
+  },
+  "HUBWFJ": {
+   "name": "Watford Junction",
+   "lat": 51.663529,
+   "lon": -0.396517,
+   "zone": null,
+   "lines": [
+    "lioness"
+   ]
+  },
+  "HUBWHC": {
+   "name": "Walthamstow Central",
+   "lat": 51.582965,
+   "lon": -0.019885,
+   "zone": "3",
+   "lines": [
+    "victoria",
+    "weaver"
+   ]
+  },
+  "HUBWHD": {
+   "name": "West Hampstead",
+   "lat": 51.546638,
+   "lon": -0.191059,
+   "zone": "2",
+   "lines": [
+    "jubilee",
+    "mildmay"
+   ]
+  },
+  "HUBWIJ": {
+   "name": "Willesden Junction",
+   "lat": 51.532259,
+   "lon": -0.244283,
+   "zone": "2+3",
+   "lines": [
+    "bakerloo",
+    "lioness",
+    "mildmay"
+   ]
+  },
+  "HUBWIM": {
+   "name": "Wimbledon",
+   "lat": 51.421207,
+   "lon": -0.206573,
+   "zone": "3",
+   "lines": [
+    "district"
+   ]
+  },
+  "HUBWMB": {
+   "name": "Wembley Central",
+   "lat": 51.552304,
+   "lon": -0.296852,
+   "zone": "4",
+   "lines": [
+    "bakerloo",
+    "lioness"
+   ]
+  },
+  "HUBWRU": {
+   "name": "West Ruislip",
+   "lat": 51.569688,
+   "lon": -0.437886,
+   "zone": "6",
+   "lines": [
+    "central"
+   ]
+  },
+  "HUBWSM": {
+   "name": "Westminster",
+   "lat": 51.50132,
+   "lon": -0.124861,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "district",
+    "jubilee"
+   ]
+  },
+  "HUBWWA": {
+   "name": "Woolwich Arsenal",
+   "lat": 51.490009,
+   "lon": 0.069127,
+   "zone": "4",
+   "lines": [
+    "dlr"
+   ]
+  },
+  "HUBZCW": {
+   "name": "Canada Water",
+   "lat": 51.497931,
+   "lon": -0.049405,
+   "zone": "2",
+   "lines": [
+    "jubilee",
+    "windrush"
+   ]
+  },
+  "HUBZFD": {
+   "name": "Farringdon",
+   "lat": 51.520252,
+   "lon": -0.104913,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "elizabeth",
+    "hammersmith-city",
+    "metropolitan"
+   ]
+  },
+  "HUBZMG": {
+   "name": "Moorgate",
+   "lat": 51.518176,
+   "lon": -0.088322,
+   "zone": "1",
+   "lines": [
+    "circle",
+    "hammersmith-city",
+    "metropolitan",
+    "northern"
+   ]
+  },
+  "HUBZWL": {
+   "name": "Whitechapel",
+   "lat": 51.519518,
+   "lon": -0.059971,
+   "zone": "2",
+   "lines": [
+    "district",
+    "elizabeth",
+    "hammersmith-city",
+    "windrush"
+   ]
+  }
+ }
+}

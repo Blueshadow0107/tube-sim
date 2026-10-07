@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tube Sim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css?v=5">
+</head>
+<body>
+  <aside id="panel">
+    <h1>Tube Sim</h1>
+
+    <div id="mode-tabs">
+      <button class="tab active" data-mode="journey">Journey</button>
+      <button class="tab" data-mode="challenge">Challenge</button>
+    </div>
+
+    <section id="journey-ui">
+      <p class="hint">Click a station to set the origin, then another for the destination.</p>
+      <input id="station-search" type="text" placeholder="Search stations…" autocomplete="off">
+      <div id="search-results"></div>
+      <div id="journey-selection"></div>
+      <div id="journey-result"></div>
+    </section>
+
+    <section id="challenge-ui" hidden>
+      <p class="hint">Cover every selected line in one run. Never stop at the same station twice — riding through doesn't count as stopping.</p>
+      <label>Objective
+        <select id="ch-objective">
+          <option value="hops">Fewest stations</option>
+          <option value="km">Shortest distance</option>
+          <option value="balanced">Balanced</option>
+        </select>
+      </label>
+      <label>Rule
+        <select id="ch-rule">
+          <option value="lenient">Lenient — ride-through is free</option>
+          <option value="strict">Strict — ride-through also counts</option>
+        </select>
+      </label>
+      <fieldset id="ch-modes">
+        <legend>Also cover</legend>
+        <label class="inline"><input type="checkbox" value="overground"> Overground (6 lines)</label>
+        <label class="inline"><input type="checkbox" value="dlr"> DLR</label>
+        <label class="inline"><input type="checkbox" value="elizabeth-line"> Elizabeth line</label>
+        <div id="ch-cover-count">Covering 11 lines</div>
+      </fieldset>
+      <label>Think time <span id="budget-label">12s</span>
+        <input id="ch-budget" type="range" min="5" max="60" step="1" value="12">
+      </label>
+      <button id="ch-solve">Solve</button>
+      <div id="challenge-status"></div>
+      <div id="challenge-result"></div>
+    </section>
+
+    <section id="layers-ui">
+      <div class="section-title">Map layers</div>
+      <label class="inline"><input type="checkbox" data-mode-layer="tube" checked> Tube</label>
+      <label class="inline"><input type="checkbox" data-mode-layer="overground"> Overground</label>
+      <label class="inline"><input type="checkbox" data-mode-layer="dlr"> DLR</label>
+      <label class="inline"><input type="checkbox" data-mode-layer="elizabeth-line"> Elizabeth</label>
+      <label class="inline"><input type="checkbox" id="river-layer" checked> River Thames</label>
+    </section>
+
+    <div id="tooltip" hidden></div>
+  </aside>
+
+  <main id="map-wrap">
+    <svg id="map" xmlns="http://www.w3.org/2000/svg">
+      <g id="viewport">
+        <g id="river"></g>
+        <g id="edges"></g>
+        <g id="routes"></g>
+        <g id="stations"></g>
+        <g id="markers"></g>
+      </g>
+    </svg>
+  </main>
+
+  <script src="/static/map.js?v=5"></script>
+</body>
+</html>
