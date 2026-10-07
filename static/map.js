@@ -7,7 +7,7 @@ const tooltip = document.getElementById("tooltip");
 let STATE = null; // {stations: [...], lines: [...]}
 const byId = new Map();
 
-const layerVisible = { tube: true, overground: false, dlr: false, "elizabeth-line": false };
+const layerVisible = { tube: true, overground: false, dlr: false, "elizabeth-line": false, rail: true };
 const LINE_MODE = new Map();
 
 // ---- projection ----------------------------------------------------------
@@ -76,6 +76,7 @@ function updateMarkerSizes() {
     s.dotEl.setAttribute("r", r);
     s.haloEl.setAttribute("r", r + 9 * scale);
   }
+  if (RAIL) for (const s of RAIL.list) s.dotEl.setAttribute("r", Math.max(32, 1.7 * scale));
 }
 
 function updateLod() {
@@ -150,6 +151,7 @@ function applyLayers() {
     g.style.display = layerVisible[g.dataset.mode] ? "" : "none";
   });
   document.getElementById("river").style.display = riverVisible ? "" : "none";
+  for (const id of ["rail-edges", "rail-stations"]) document.getElementById(id).style.display = layerVisible.rail ? "" : "none";
   for (const s of STATE.stations) {
     // with history loaded, only the lines serving the station at the chosen date count
     const lines = s.activeLines ? [...s.activeLines] : s.lines;
@@ -430,6 +432,11 @@ document.querySelectorAll("[data-mode-layer]").forEach(i => {
     applyLayers();
   });
 });
+document.getElementById("rail-layer").addEventListener("change", e => {
+  layerVisible.rail = e.target.checked;
+  applyLayers();
+  if (HIST) applyDate(curISO);
+});
 document.getElementById("river-layer").addEventListener("change", e => {
   riverVisible = e.target.checked;
   applyLayers();
@@ -579,19 +586,100 @@ function applyDate(iso, prevISO) {
   updateLod();
   updateMarkerSizes();
   const shown = STATE.stations.filter(s => s.el.style.display !== "none").length;
+  const rail = RAIL ? applyRailDate(iso, prevISO) : null;
   document.getElementById("tl-stats").innerHTML =
-    `<b>${shown}</b> stations · <b>${lines.size}</b> lines · <b>${Math.round(km)}</b> km of track`;
-  // what just opened (since the previous frame), for the ticker
+    `<b>${shown}</b> stations · <b>${lines.size}</b> lines · <b>${Math.round(km)}</b> km of track` +
+    (rail && layerVisible.rail ? ` · <b>${rail.open}</b> rail stations` : "");
+  // what just opened or closed (since the previous frame), for the ticker
   const news = document.getElementById("tl-news");
   if (prevISO && prevISO < iso) {
-    const fresh = STATE.stations.filter(s => s.first && s.first > prevISO && s.first <= iso && s.el.style.display !== "none");
-    if (fresh.length) {
-      const names = fresh.slice(0, 4).map(s => s.name.replace(/ (Underground|DLR|Rail) Station$/, ""));
-      news.innerHTML = `<i>Opened:</i> ${names.join(", ")}${fresh.length > 4 ? ` <i>+${fresh.length - 4} more</i>` : ""}`;
-    }
+    const tidy = n => n.replace(/ (Underground|DLR|Rail|tube|railway) (Station|station)$/, "").replace(/ (railway|tube) station$/i, "");
+    const fresh = STATE.stations.filter(s => s.first && s.first > prevISO && s.first <= iso && s.el.style.display !== "none").map(s => tidy(s.name));
+    const opened = [...fresh, ...(rail && layerVisible.rail ? rail.opened : [])];
+    const list = (label, names) => `<i>${label}:</i> ${names.slice(0, 4).join(", ")}${names.length > 4 ? ` <i>+${names.length - 4} more</i>` : ""}`;
+    const parts = [];
+    if (opened.length) parts.push(list("Opened", opened));
+    if (rail && layerVisible.rail && rail.closed.length) parts.push(list("Closed", rail.closed));
+    if (parts.length) news.innerHTML = parts.join("  ·  ");
   } else if (!prevISO) {
     news.textContent = "";
   }
+}
+
+// ---- National Rail + former stations (data/rail_history.json) -------------------------------
+
+let RAIL = null;
+
+function renderRail() {
+  const gEdges = document.getElementById("rail-edges");
+  const gStations = document.getElementById("rail-stations");
+  gEdges.replaceChildren();
+  gStations.replaceChildren();
+  const pos = new Map();
+  RAIL.list = [];
+  for (const [id, s] of Object.entries(RAIL.stations)) {
+    const p = project(s.lat, s.lon);
+    s.id = id;
+    s.x = p.x;
+    s.y = p.y;
+    pos.set(id, s);
+    const g = el("g", { class: "rail-stn" });
+    s.dotEl = el("circle", { class: "rail-dot" + (s.closed ? " former" : ""), cx: s.x, cy: s.y, r: 60 });
+    g.appendChild(s.dotEl);
+    g.addEventListener("mousemove", ev => showRailTooltip(s, ev));
+    g.addEventListener("mouseleave", hideTooltip);
+    gStations.appendChild(g);
+    s.el = g;
+    RAIL.list.push(s);
+  }
+  for (const s of STATE.stations) pos.set(s.id, s); // links can end at a TfL station
+  for (const lk of RAIL.links) {
+    const a = pos.get(lk.a), b = pos.get(lk.b);
+    if (!a || !b) { lk.el = null; continue; }
+    lk.el = el("line", { class: "rail-edge" + (lk.kind === "inferred" ? " inferred" : ""), x1: a.x, y1: a.y, x2: b.x, y2: b.y, "stroke-width": 70 });
+    gEdges.appendChild(lk.el);
+  }
+}
+
+function showRailTooltip(s, ev) {
+  tooltip.hidden = false;
+  const year = d => (d ? d.slice(0, 4) : "");
+  tooltip.textContent = `${s.name.replace(/ (railway|tube) station$/i, "")} · rail ${year(s.opened)}${s.closed ? "–" + year(s.closed) : "–"}`;
+  tooltip.style.left = ev.clientX + 12 + "px";
+  tooltip.style.top = ev.clientY - 8 + "px";
+}
+
+function applyRailDate(iso, prevISO) {
+  let open = 0;
+  const opened = [], closed = [];
+  for (const s of RAIL.list) {
+    const on = s.opened <= iso && (s.closed === null || iso < s.closed);
+    s.el.style.display = on ? "" : "none";
+    if (on) open++;
+    if (prevISO && prevISO < iso) {
+      if (s.opened > prevISO && s.opened <= iso) opened.push(s.name.replace(/ (railway|tube) station$/i, ""));
+      if (s.closed && s.closed > prevISO && s.closed <= iso) closed.push(s.name.replace(/ (railway|tube) station$/i, ""));
+    }
+  }
+  for (const lk of RAIL.links) {
+    if (!lk.el) continue;
+    lk.el.style.display = lk.from <= iso && (lk.to === null || iso < lk.to) ? "" : "none";
+  }
+  return { open, opened, closed };
+}
+
+function loadRail() {
+  fetch("/api/rail")
+    .then(r => (r.ok ? r.json() : null))
+    .then(r => {
+      if (!r || !r.links) return;
+      RAIL = r;
+      renderRail();
+      updateMarkerSizes();
+      applyLayers();
+      if (HIST) applyDate(curISO);
+    })
+    .catch(() => {});
 }
 
 function stopPlay() {
@@ -643,4 +731,5 @@ fetch("/api/state").then(r => r.json()).then(data => {
   updateCoverCount();
   fetch("/api/river").then(r => r.json()).then(d => renderRiver(d.parts));
   loadHistory();
+  loadRail();
 });

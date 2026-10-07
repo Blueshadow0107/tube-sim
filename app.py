@@ -4,6 +4,7 @@ Endpoints:
   GET  /                      map UI
   GET  /api/state             all stations + line edges for rendering
   GET  /api/history           link lifetimes + station service dates (time slider)
+  GET  /api/rail              National Rail + closed stations and link lifetimes (time slider)
   GET  /api/route?from=&to=   fastest route between two station ids
   POST /api/challenge/solve   all-lines challenge solver (JSON body:
                               objective hops|km|balanced,
@@ -22,6 +23,7 @@ graph = TubeGraph()
 solver = ChallengeSolver(graph)
 RIVER_PATH = Path(__file__).parent / "data" / "thames.json"
 HISTORY_PATH = Path(__file__).parent / "data" / "history.json"
+RAIL_PATH = Path(__file__).parent / "data" / "rail_history.json"
 
 
 @app.get("/")
@@ -40,6 +42,14 @@ def history():
     if not HISTORY_PATH.exists():
         return jsonify({"error": "history data missing — run fetch_history.py then build_history.py"}), 404
     return app.response_class(HISTORY_PATH.read_text(), mimetype="application/json")
+
+
+@app.get("/api/rail")
+def rail():
+    """National Rail + closed stations and their link lifetimes (built by build_rail.py) for the time slider."""
+    if not RAIL_PATH.exists():
+        return jsonify({"error": "rail data missing — run fetch_closed.py, fetch_wikitext.py, build_rail.py"}), 404
+    return app.response_class(RAIL_PATH.read_text(), mimetype="application/json")
 
 
 @app.get("/api/river")

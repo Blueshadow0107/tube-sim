@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 logs_server.txt
 .claude/worktrees/
+data/cache/

@@ -263,3 +263,10 @@ label.inline input { margin-right: 6px; }
 #tl-news i { color: var(--dim); font-style: normal; }
 .edge.new { stroke-opacity: 1; }
 #tl-note { margin: 0 0 10px; padding: 6px 8px; border-left: 3px solid var(--accent); background: #10161c; }
+
+/* ---- National Rail + former stations ---- */
+.rail-edge { stroke: #5d6975; stroke-linecap: round; opacity: 0.7; }
+.rail-edge.inferred { stroke-dasharray: 220 260; opacity: 0.55; }
+.rail-dot { fill: #9aa5b1; stroke: #11151a; stroke-width: 25; }
+.rail-dot.former { fill: #11151a; stroke: #9aa5b1; stroke-width: 55; }
+.rail-stn { cursor: default; }

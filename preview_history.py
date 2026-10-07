@@ -16,9 +16,19 @@ def main() -> None:
     snap = json.load(open(DATA / "tfl_snapshot.json"))
     colour = {l["id"]: l["color"] for l in snap["lines"]}
     st = hist["stations"]
+    rail = json.load(open(DATA / "rail_history.json")) if (DATA / "rail_history.json").exists() else None
     fig, axes = plt.subplots(2, 3, figsize=(15, 9.4), facecolor="#101418")
     for ax, y in zip(axes.flat, YEARS):
         ax.set_facecolor("#101418")
+        if rail:  # National Rail and closed stations: grey, dashed when the link is inferred, underneath the TfL lines
+            rs = rail["stations"]
+            pos = {**{k: (v["lon"], v["lat"]) for k, v in rs.items()}, **{k: (v["lon"], v["lat"]) for k, v in st.items()}}
+            for l in rail["links"]:
+                if l["from"] <= y and (l["to"] is None or y < l["to"]) and l["a"] in pos and l["b"] in pos:
+                    ax.plot([pos[l["a"]][0], pos[l["b"]][0]], [pos[l["a"]][1], pos[l["b"]][1]], color="#6d7782", lw=0.8,
+                            ls="--" if l["kind"] == "inferred" else "-", zorder=1)
+            open_rail = [s for s in rs.values() if s["opened"] <= y and (s["closed"] is None or y < s["closed"])]
+            ax.scatter([s["lon"] for s in open_rail], [s["lat"] for s in open_rail], s=4, color="#9aa5b1", zorder=2)
         live = [l for l in hist["links"] if l["from"] <= y and (l["to"] is None or y < l["to"])]
         for l in live:
             a, b = st[l["a"]], st[l["b"]]

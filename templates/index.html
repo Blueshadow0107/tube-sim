@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Tube Sim</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/static/style.css?v=7">
+  <link rel="stylesheet" href="/static/style.css?v=8">
 </head>
 <body>
   <aside id="panel">
@@ -61,6 +61,7 @@
       <label class="inline"><input type="checkbox" data-mode-layer="overground"> Overground</label>
       <label class="inline"><input type="checkbox" data-mode-layer="dlr"> DLR</label>
       <label class="inline"><input type="checkbox" data-mode-layer="elizabeth-line"> Elizabeth</label>
+      <label class="inline"><input type="checkbox" id="rail-layer" checked> National Rail &amp; former stations</label>
       <label class="inline"><input type="checkbox" id="river-layer" checked> River Thames</label>
     </section>
 
@@ -71,7 +72,9 @@
     <svg id="map" xmlns="http://www.w3.org/2000/svg">
       <g id="viewport">
         <g id="river"></g>
+        <g id="rail-edges"></g>
         <g id="edges"></g>
+        <g id="rail-stations"></g>
         <g id="routes"></g>
         <g id="stations"></g>
         <g id="markers"></g>
@@ -98,6 +101,6 @@
     </div>
   </main>
 
-  <script src="/static/map.js?v=7"></script>
+  <script src="/static/map.js?v=8"></script>
 </body>
 </html>
