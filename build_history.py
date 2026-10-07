@@ -10,7 +10,10 @@ import difflib
 import json
 import math
 import re
+from collections import defaultdict
 from pathlib import Path
+
+from timeline import link_lifetimes, resolve, served_windows, shortest_path
 
 DATA = Path(__file__).resolve().parent / "data"
 SUFFIX = re.compile(r"\b(underground|tube|railway|rail|dlr|overground|elizabeth line|london|station|stop)\b", re.I)
@@ -69,6 +72,66 @@ def main() -> None:
     print(f"wikidata stations not in today's TfL snapshot: {len(extras)} (National Rail, closed, or unmatched)")
     yrs = sorted(int(v['opened'][:4]) for v in out.values() if v['opened'] and v['opened'][:4].isdigit())
     print("opening years of matched stations:", yrs[:3], "...", yrs[-3:], "| median", yrs[len(yrs)//2])
+    manual = json.load(open(DATA / "line_fixes.json"))["station_dates"]
+    for key, name in unmatched_snap:
+        if name in manual:
+            out[key] = {"wikidata": [], "opened": manual[name], "closed": None, "manual": True}
+    build_timeline(snap, out)
+
+
+def build_timeline(snap: dict, hist: dict) -> None:
+    fixes = json.load(open(DATA / "line_fixes.json"))["lines"]
+    st = snap["stations"]
+    all_links: list[dict] = []
+    review = ["# Line fix table, review sheet", "",
+              "Every section of `data/line_fixes.json` with the number of stations it covers. A row is flagged when a station on it opened "
+              "**after** the section date (by Wikidata), which means the date in my table is probably too early.", ""]
+    first_served: dict[str, str] = {}
+    last_served: dict[str, str | None] = {}
+    problems = 0
+    for line in snap["lines"]:
+        adj: dict[str, set[str]] = defaultdict(set)
+        for a, b in line["edges"]:
+            adj[a].add(b)
+            adj[b].add(a)
+        names = {k: st[k]["name"] for k in adj}
+        opened = {k: hist[k]["opened"] for k in adj if k in hist and hist[k]["opened"]}
+        closed = {k: hist[k]["closed"] for k in adj if k in hist and hist[k]["closed"]}
+        fx = fixes[line["id"]]
+        win = served_windows(adj, names, opened, closed, fx["start"], fx["sections"])
+        links = link_lifetimes(adj, win)
+        for lk in links:
+            lk["line"] = line["id"]
+        all_links += links
+        for k, (f, t) in win.items():
+            first_served[k] = min(first_served.get(k, f), f)
+            prev_t = last_served.get(k, "")
+            last_served[k] = None if (prev_t is None or t is None) else max(prev_t, t)
+        today = {(min(a, b), max(a, b)) for a, b in line["edges"]}
+        final = {(lk["a"], lk["b"]) for lk in links if lk["to"] is None}
+        if final != today:
+            problems += 1
+            print(f"  !! {line['id']}: final network differs from today's (missing {len(today - final)}, extra {len(final - today)})")
+        review.append(f"## {line['name']} (start {fx['start']})")
+        review.append("| section | date | conf | stations | flags |")
+        review.append("|---|---|---|---|---|")
+        for a, b, date, conf in fx["sections"]:
+            path = shortest_path(adj, resolve(names, a), resolve(names, b))
+            late = [(names[n], opened[n]) for n in path if n in opened and opened[n][:7] > date[:7]]
+            flag = "; ".join(f"{n} opened {o}" for n, o in late[:4])
+            review.append(f"| {a} → {b} | {date} | {conf} | {len(path)} | {flag} |")
+        review.append("")
+    stations = {k: {"name": v["name"], "lat": v["lat"], "lon": v["lon"], "zone": v.get("zone"),
+                    "opened": hist.get(k, {}).get("opened"), "closed": hist.get(k, {}).get("closed"),
+                    "first_served": first_served.get(k), "last_served": last_served.get(k)}
+                for k, v in st.items() if k in first_served}
+    (DATA / "history.json").write_text(json.dumps({"stations": stations, "links": all_links}, ensure_ascii=False))
+    (DATA / "line_fixes_review.md").write_text("\n".join(review))
+    print(f"history: {len(all_links)} link lifetimes over {len(stations)} stations; lines whose final network differs from today's: {problems}")
+    for y in ("1870-01-01", "1900-01-01", "1930-01-01", "1960-01-01", "1990-01-01", "2010-01-01", "2025-12-31"):
+        sv = {k for k, v in stations.items() if v["first_served"] and v["first_served"] <= y and (v["last_served"] is None or y < v["last_served"])}
+        ed = [lk for lk in all_links if lk["from"] <= y and (lk["to"] is None or y < lk["to"])]
+        print(f"  {y[:4]}: {len(sv):3d} served stations, {len(ed):3d} line links")
 
 
 if __name__ == "__main__":

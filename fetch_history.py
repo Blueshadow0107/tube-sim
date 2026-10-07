@@ -1,7 +1,9 @@
 """Fetch London railway station history from Wikidata: opening/closing dates, coordinates, recorded neighbours.
 
-Stations: every item in a bounding box around Greater London typed as a railway station (any subclass), plus items typed
+Stations: every item in a few bounding boxes (Greater London plus the Reading and Chesham/Amersham corridors that
+tube-sim's Elizabeth and Metropolitan lines reach) typed as a railway station (any subclass), plus items typed
 former / disused / closed station. Edges: P197 "adjacent station" statements, with the P81 "connecting line" qualifier.
+Several small boxes are used because one big box makes the query service time out.
 
 Output: data/wikidata_london_rail.json   (./.venv/bin/python fetch_history.py; the WDQS endpoint rate-limits, so it retries)
 """
@@ -14,9 +16,18 @@ import urllib.request
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parent / "data" / "wikidata_london_rail.json"
-BOX = ('SERVICE wikibase:box { ?s wdt:P625 ?coord . bd:serviceParam wikibase:cornerSouthWest "Point(-0.56 51.26)"^^geo:wktLiteral ; '
-       'wikibase:cornerNorthEast "Point(0.38 51.72)"^^geo:wktLiteral . }')
+BOXES = [  # (south-west lon, lat), (north-east lon, lat)
+    ((-0.56, 51.26), (0.38, 51.72)),    # Greater London
+    ((-1.05, 51.38), (-0.56, 51.56)),   # Reading, Twyford, Maidenhead, Taplow, Burnham, Slough
+    ((-0.72, 51.60), (-0.56, 51.72)),   # Amersham, Chesham, Chalfont & Latimer
+]
 LABEL = 'SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }'
+
+
+def box(b) -> str:
+    (w, s), (e, n) = b
+    return (f'SERVICE wikibase:box {{ ?s wdt:P625 ?coord . bd:serviceParam wikibase:cornerSouthWest "Point({w} {s})"^^geo:wktLiteral ; '
+            f'wikibase:cornerNorthEast "Point({e} {n})"^^geo:wktLiteral . }}')
 
 
 def sparql(q: str, tries: int = 5) -> list[dict]:
@@ -41,6 +52,7 @@ def qid(uri: str) -> str:
 
 def main() -> None:
     stations: dict[str, dict] = {}
+    adj_rows: list[dict] = []
 
     def add(rows: list[dict], former: bool) -> None:
         for b in rows:
@@ -57,21 +69,23 @@ def main() -> None:
             if former:
                 d["classes"].add("former/disused")
 
-    print("stations ...", flush=True)
-    add(sparql(f"""SELECT ?s ?sLabel ?coord ?open ?close ?clsLabel WHERE {{ {BOX}
-      ?s wdt:P31 ?cls . ?cls wdt:P279* wd:Q55488 .
-      OPTIONAL {{ ?s wdt:P1619 ?open }} OPTIONAL {{ ?s wdt:P3999 ?close }} {LABEL} }}"""), False)
-    time.sleep(5)
-    print("former / disused stations ...", flush=True)
-    add(sparql(f"""SELECT ?s ?sLabel ?coord ?open ?close ?clsLabel WHERE {{ {BOX}
-      ?s wdt:P31 ?cls . ?cls wdt:P279* wd:Q55488 .
-      FILTER EXISTS {{ ?s wdt:P31 ?x . ?x rdfs:label ?l . FILTER(LANG(?l) = 'en' && (CONTAINS(LCASE(?l), 'former') || CONTAINS(LCASE(?l), 'disused') || CONTAINS(LCASE(?l), 'closed') || CONTAINS(LCASE(?l), 'abandoned'))) }}
-      OPTIONAL {{ ?s wdt:P1619 ?open }} OPTIONAL {{ ?s wdt:P3999 ?close }} {LABEL} }}"""), True)
-    time.sleep(5)
-    print("adjacency ...", flush=True)
-    adj = sparql(f"""SELECT ?s ?b ?lineLabel WHERE {{ {BOX}
-      ?s p:P197 ?st . ?st ps:P197 ?b . OPTIONAL {{ ?st pq:P81 ?line }} {LABEL} }}""")
-    edges = sorted({(qid(b["s"]["value"]), qid(b["b"]["value"]), b.get("lineLabel", {}).get("value", "")) for b in adj})
+    for i, b in enumerate(BOXES):
+        print(f"box {i + 1}/{len(BOXES)}: stations ...", flush=True)
+        add(sparql(f"""SELECT ?s ?sLabel ?coord ?open ?close ?clsLabel WHERE {{ {box(b)}
+          ?s wdt:P31 ?cls . ?cls wdt:P279* wd:Q55488 .
+          OPTIONAL {{ ?s wdt:P1619 ?open }} OPTIONAL {{ ?s wdt:P3999 ?close }} {LABEL} }}"""), False)
+        time.sleep(4)
+        print(f"box {i + 1}/{len(BOXES)}: former / disused stations ...", flush=True)
+        add(sparql(f"""SELECT ?s ?sLabel ?coord ?open ?close ?clsLabel WHERE {{ {box(b)}
+          ?s wdt:P31 ?cls . ?cls wdt:P279* wd:Q55488 .
+          FILTER EXISTS {{ ?s wdt:P31 ?x . ?x rdfs:label ?l . FILTER(LANG(?l) = 'en' && (CONTAINS(LCASE(?l), 'former') || CONTAINS(LCASE(?l), 'disused') || CONTAINS(LCASE(?l), 'closed') || CONTAINS(LCASE(?l), 'abandoned'))) }}
+          OPTIONAL {{ ?s wdt:P1619 ?open }} OPTIONAL {{ ?s wdt:P3999 ?close }} {LABEL} }}"""), True)
+        time.sleep(4)
+        print(f"box {i + 1}/{len(BOXES)}: adjacency ...", flush=True)
+        adj_rows += sparql(f"""SELECT ?s ?b ?lineLabel WHERE {{ {box(b)}
+          ?s p:P197 ?st . ?st ps:P197 ?b . OPTIONAL {{ ?st pq:P81 ?line }} {LABEL} }}""")
+        time.sleep(4)
+    edges = sorted({(qid(b["s"]["value"]), qid(b["b"]["value"]), b.get("lineLabel", {}).get("value", "")) for b in adj_rows})
     edges = [list(e) for e in edges if e[0] in stations and e[1] in stations]
     out = {"stations": {k: {**v, "open": sorted(v["open"]), "close": sorted(v["close"]), "classes": sorted(v["classes"])} for k, v in stations.items() if v["lat"] is not None},
            "edges": edges}

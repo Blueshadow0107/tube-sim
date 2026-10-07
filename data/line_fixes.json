@@ -1,0 +1,175 @@
+{
+  "_about": "Per-line service history for tube-sim's 19 lines. 'start' is when the line first ran in this identity. Each section [from, to, date, confidence] says the line served every station on the path between those two stations from that date (later date does not override an earlier one for the same station). A station is served from max(its own opening date, its section/line date). Sections are my recall of the history: confidence high/med/low, to be reviewed. Where a line was run under another name before (Bakerloo to Stanmore, the Overground predecessors, Metropolitan-run Hammersmith & City), the corridor is shown in today's line colour from the date given.",
+  "station_dates": {
+    "_about": "Opening dates typed in by hand for the stations Wikidata matching missed (low confidence on the ones marked ~; they only matter if later than the line's start).",
+    "Chesham": "1889-07-08",
+    "Amersham": "1892-09-01",
+    "Chalfont & Latimer": "1889-09-08",
+    "Highams Park": "1873-04-21",
+    "Reading": "1840-03-30",
+    "Slough": "1840-06-04",
+    "Twyford": "1840-07-01",
+    "Maidenhead": "1871-01-01",
+    "Taplow": "1854-01-01",
+    "Burnham (Berks)": "1899-07-01",
+    "Stratford High Street": "2007-01-01",
+    "Cutty Sark (for Maritime Greenwich)": "1999-12-03",
+    "New Cross ELL": "1876-01-01"
+  },
+  "lines": {
+    "bakerloo": {
+      "start": "1906-03-10",
+      "sections": [
+        ["Elephant & Castle", "Baker Street", "1906-03-10", "high"],
+        ["Baker Street", "Marylebone", "1907-03-27", "med"],
+        ["Marylebone", "Paddington", "1913-12-01", "med"],
+        ["Paddington", "Queen's Park", "1915-01-31", "med"],
+        ["Queen's Park", "Harrow & Wealdstone", "1917-04-16", "med"]
+      ]
+    },
+    "central": {
+      "start": "1900-07-30",
+      "sections": [
+        ["Shepherd's Bush", "Bank", "1900-07-30", "high"],
+        ["Bank", "Liverpool Street", "1912-07-28", "med"],
+        ["Shepherd's Bush", "Ealing Broadway", "1920-08-03", "med"],
+        ["Liverpool Street", "Stratford", "1946-12-04", "high"],
+        ["Stratford", "Leytonstone", "1947-05-05", "med"],
+        ["Leytonstone", "Woodford", "1947-12-14", "med"],
+        ["Woodford", "Epping", "1949-09-25", "med"],
+        ["North Acton", "Greenford", "1947-06-30", "med"],
+        ["Greenford", "West Ruislip", "1948-11-21", "med"]
+      ]
+    },
+    "circle": {
+      "start": "1884-10-06",
+      "sections": [
+        ["Hammersmith (H&C Line)", "Edgware Road (Circle Line)", "2009-12-13", "high"]
+      ]
+    },
+    "district": {
+      "start": "1868-12-24",
+      "sections": [
+        ["Westminster", "South Kensington", "1868-12-24", "high"],
+        ["Earl's Court", "Kensington (Olympia)", "1872-01-01", "low"],
+        ["Earl's Court", "West Brompton", "1871-10-30", "low"],
+        ["Hammersmith", "Richmond", "1877-06-01", "med"],
+        ["Turnham Green", "Ealing Broadway", "1879-07-01", "med"],
+        ["Putney Bridge", "Wimbledon", "1889-06-03", "med"],
+        ["Whitechapel", "Barking", "1902-06-02", "med"],
+        ["Barking", "Upminster", "1932-09-12", "med"]
+      ]
+    },
+    "hammersmith-city": {
+      "start": "1864-06-13",
+      "sections": [
+        ["Hammersmith (H&C Line)", "Paddington", "1864-06-13", "high"],
+        ["Aldgate East", "Barking", "1936-10-04", "med"]
+      ]
+    },
+    "jubilee": {
+      "start": "1932-12-10",
+      "sections": [
+        ["Stanmore", "Baker Street", "1932-12-10", "med"],
+        ["Baker Street", "Green Park", "1979-05-01", "high"],
+        ["North Greenwich", "Stratford", "1999-05-14", "med"],
+        ["Green Park", "North Greenwich", "1999-11-20", "med"]
+      ]
+    },
+    "metropolitan": {
+      "start": "1863-01-10",
+      "sections": [
+        ["Baker Street", "Moorgate", "1863-01-10", "high"],
+        ["Finchley Road", "Harrow-on-the-Hill", "1880-08-02", "med"],
+        ["Harrow-on-the-Hill", "Pinner", "1885-05-25", "med"],
+        ["Pinner", "Rickmansworth", "1887-09-01", "med"],
+        ["Rickmansworth", "Chesham", "1889-07-08", "med"],
+        ["Chalfont & Latimer", "Amersham", "1892-09-01", "med"],
+        ["Harrow-on-the-Hill", "Uxbridge", "1904-07-04", "high"],
+        ["Moor Park", "Watford", "1925-11-02", "med"]
+      ]
+    },
+    "northern": {
+      "start": "1890-12-18",
+      "sections": [
+        ["Stockwell", "Borough", "1890-12-18", "med"],
+        ["Borough", "Bank", "1900-02-25", "med"],
+        ["Bank", "Moorgate", "1900-02-25", "med"],
+        ["Moorgate", "Angel", "1901-11-17", "med"],
+        ["Camden Town", "Golders Green", "1907-06-22", "med"],
+        ["Camden Town", "Archway", "1907-06-22", "med"],
+        ["Golders Green", "Edgware", "1924-08-18", "med"],
+        ["Embankment", "Kennington", "1926-09-13", "med"],
+        ["Clapham Common", "Morden", "1926-09-13", "high"],
+        ["Archway", "East Finchley", "1939-07-03", "med"],
+        ["East Finchley", "High Barnet", "1940-04-14", "med"],
+        ["Finchley Central", "Mill Hill East", "1941-05-18", "med"],
+        ["Kennington", "Battersea Power Station", "2021-09-20", "high"]
+      ]
+    },
+    "piccadilly": {
+      "start": "1906-12-15",
+      "sections": [
+        ["Hammersmith", "Finsbury Park", "1906-12-15", "high"],
+        ["Finsbury Park", "Cockfosters", "1932-09-19", "med"],
+        ["Acton Town", "South Harrow", "1932-07-04", "med"],
+        ["Acton Town", "Hounslow West", "1933-03-13", "med"],
+        ["South Harrow", "Uxbridge", "1933-10-23", "med"],
+        ["Hounslow West", "Heathrow Terminals 2 & 3", "1977-12-16", "high"],
+        ["Heathrow Terminals 2 & 3", "Heathrow Terminal 4", "1986-04-12", "high"],
+        ["Heathrow Terminals 2 & 3", "Heathrow Terminal 5", "2008-03-27", "high"]
+      ]
+    },
+    "victoria": {
+      "start": "1968-09-01",
+      "sections": [
+        ["Walthamstow Central", "Highbury & Islington", "1968-09-01", "high"],
+        ["Highbury & Islington", "Warren Street", "1968-12-01", "high"],
+        ["Warren Street", "Victoria", "1969-03-07", "high"],
+        ["Victoria", "Brixton", "1971-07-23", "high"]
+      ]
+    },
+    "waterloo-city": {
+      "start": "1898-07-08",
+      "sections": [["Waterloo", "Bank", "1898-07-08", "high"]]
+    },
+    "dlr": {
+      "start": "1987-08-31",
+      "sections": [
+        ["Tower Gateway", "Island Gardens", "1987-08-31", "high"],
+        ["Stratford", "Poplar", "1987-08-31", "med"],
+        ["Bank", "Westferry", "1991-07-29", "high"],
+        ["Poplar", "Beckton", "1994-03-28", "high"],
+        ["Island Gardens", "Lewisham", "1999-11-20", "high"],
+        ["Canning Town", "King George V", "2005-12-02", "med"],
+        ["King George V", "Woolwich Arsenal", "2009-01-12", "high"],
+        ["Stratford", "Stratford International", "2011-08-31", "high"]
+      ]
+    },
+    "elizabeth": {
+      "start": "2015-05-31",
+      "sections": [
+        ["Liverpool Street", "Shenfield", "2015-05-31", "high"],
+        ["Paddington", "Heathrow Terminal 4", "2018-05-20", "med"],
+        ["Heathrow Terminals 2 & 3", "Heathrow Terminal 5", "2022-05-24", "med"],
+        ["Paddington", "Reading", "2019-12-15", "med"],
+        ["Paddington", "Abbey Wood", "2022-05-24", "high"]
+      ]
+    },
+    "lioness":     { "start": "2007-11-11", "sections": [] },
+    "mildmay":     { "start": "2007-11-11", "sections": [] },
+    "suffragette": { "start": "2007-11-11", "sections": [["Barking", "Barking Riverside", "2022-07-18", "high"]] },
+    "windrush": {
+      "start": "2010-04-27",
+      "sections": [
+        ["Dalston Junction", "New Cross ELL", "2010-04-27", "high"],
+        ["New Cross ELL", "West Croydon", "2010-05-23", "med"],
+        ["Sydenham", "Crystal Palace", "2010-05-23", "med"],
+        ["Highbury & Islington", "Dalston Junction", "2011-02-28", "high"],
+        ["Surrey Quays", "Clapham Junction", "2012-12-09", "high"]
+      ]
+    },
+    "weaver":  { "start": "2015-05-31", "sections": [] },
+    "liberty": { "start": "2015-05-31", "sections": [] }
+  }
+}
