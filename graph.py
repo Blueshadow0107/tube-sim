@@ -36,9 +36,29 @@ def haversine_km(a_lat, a_lon, b_lat, b_lon):
     return 2 * r * math.asin(math.sqrt(h))
 
 
+HISTORY = Path(__file__).parent / "data" / "history.json"
+
+
+def dated_snapshot(snapshot, history, iso):
+    """Today's snapshot restricted to what was running on `iso` (YYYY-MM-DD), using the link lifetimes in history.json.
+
+    Lines with no running link that day disappear; a station keeps only the lines that served it that day and
+    disappears if none did. Station coordinates and line colours are today's.
+    """
+    edges_by_line, served = {}, {}
+    for lk in history["links"]:
+        if lk["from"] <= iso and (lk["to"] is None or iso < lk["to"]):
+            edges_by_line.setdefault(lk["line"], []).append([lk["a"], lk["b"]])
+            for s in (lk["a"], lk["b"]):
+                served.setdefault(s, set()).add(lk["line"])
+    lines = [{**line, "edges": edges_by_line[line["id"]]} for line in snapshot["lines"] if line["id"] in edges_by_line]
+    stations = {sid: {**snapshot["stations"][sid], "lines": sorted(ls)} for sid, ls in served.items()}
+    return {**snapshot, "lines": lines, "stations": stations}
+
+
 class TubeGraph:
-    def __init__(self, path=DATA):
-        self.data = json.loads(Path(path).read_text())
+    def __init__(self, path=DATA, data=None):
+        self.data = data if data is not None else json.loads(Path(path).read_text())
         self.stations = self.data["stations"]
         self.lines = {l["id"]: l for l in self.data["lines"]}
         self.mode_speeds = {

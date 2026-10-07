@@ -296,10 +296,10 @@ function updateSelection() {
   if (selA) box.appendChild(node("div", "sel", [node("b", "", "A: "), document.createTextNode(name(selA))]));
   if (selB) box.appendChild(node("div", "sel", [node("b", "", "B: "), document.createTextNode(name(selB))]));
   if (selA && selB) {
-    fetch(`/api/route?from=${encodeURIComponent(selA)}&to=${encodeURIComponent(selB)}`)
+    fetch(`/api/route?from=${encodeURIComponent(selA)}&to=${encodeURIComponent(selB)}${dateParam()}`)
       .then(r => r.json())
       .then(data => {
-        if (data.error) { res.textContent = data.error; return; }
+        if (data.error) { clearRoutes(); res.textContent = data.error; return; }
         drawLegs(data.legs, { endpoints: true });
         res.appendChild(renderTotals(data.totals));
         res.appendChild(renderLegList(data.legs));
@@ -325,7 +325,7 @@ function runChallenge() {
   fetch("/api/challenge/solve", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ objective, rule, budget_seconds: budget, include_modes: includeModes }),
+    body: JSON.stringify({ objective, rule, budget_seconds: budget, include_modes: includeModes, date: dateOrNull() }),
   })
     .then(r => r.json())
     .then(data => {
@@ -357,10 +357,16 @@ function renderCoverage(covered) {
   return wrap;
 }
 
+// the date the slider is on, or null for "today" (so the server uses today's network)
+function dateOrNull() { return HIST && curISO < "2025-12-31" ? curISO : null; }
+function dateParam() { const d = dateOrNull(); return d ? `&date=${d}` : ""; }
+
 function updateCoverCount() {
-  const n = 11 + [...document.querySelectorAll("#ch-modes input:checked")]
-    .reduce((acc, i) => acc + (i.value === "overground" ? 6 : 1), 0);
-  document.getElementById("ch-cover-count").textContent = `Covering ${n} lines`;
+  const ids = ACTIVE_LINE_IDS || new Set(STATE.lines.map(l => l.id)); // lines running on the chosen date
+  const modeOf = id => LINE_MODE.get(id);
+  const wanted = new Set(["tube", ...[...document.querySelectorAll("#ch-modes input:checked")].map(i => i.value)]);
+  const n = [...ids].filter(id => wanted.has(modeOf(id))).length;
+  document.getElementById("ch-cover-count").textContent = n ? `Covering ${n} line${n === 1 ? "" : "s"}` : "No lines to cover on this date";
 }
 
 // ---- shared little builders ----------------------------------------------
@@ -368,7 +374,8 @@ function updateCoverCount() {
 function node(tag, cls, children) {
   const e = document.createElement(tag);
   if (cls) e.className = cls;
-  for (const c of children) e.appendChild(c);
+  // children is a list of nodes and/or strings; a bare string is one text child (the old code looped over its characters and threw)
+  for (const c of [].concat(children)) e.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
   return e;
 }
 
@@ -447,7 +454,9 @@ document.getElementById("station-search").addEventListener("input", e => {
   const box = document.getElementById("search-results");
   box.replaceChildren();
   if (q.length < 2) return;
-  const hits = STATE.stations.filter(s => s.name.toLowerCase().includes(q)).slice(0, 12);
+  const hits = STATE.stations
+    .filter(s => (!s.activeLines || s.activeLines.size) && s.name.toLowerCase().includes(q)) // only stations open on the chosen date
+    .slice(0, 12);
   for (const s of hits) {
     const row = node("div", "", [document.createTextNode(s.name)]);
     row.addEventListener("click", () => {
@@ -494,6 +503,7 @@ svg.addEventListener("wheel", e => {
 // The slider moves in months from Jan 1863; a month's date is its LAST day, so everything that opened in it is included.
 
 let HIST = null;
+let ACTIVE_LINE_IDS = null; // ids of the lines with a running link on the slider's date (null until history loads)
 let curISO = "9999-12-31";
 let playing = false, playRaf = 0, playMonth = 0;
 const START_YEAR = 1863, MONTHS = (2026 - START_YEAR) * 12; // slider 0 .. MONTHS-1
@@ -546,9 +556,13 @@ function renderHistory() {
     ticks.appendChild(t);
   }
   document.getElementById("timebar").hidden = false;
-  const fromHash = /^#(\d{4})(?:-(\d{1,2}))?$/.exec(location.hash);
+  // deep link: #1971-07 jumps to a month; #1971-07&from=<station id>&to=<station id> also plans that journey
+  const parts = location.hash.slice(1).split("&");
+  const fromHash = /^(\d{4})(?:-(\d{1,2}))?$/.exec(parts[0]);
   const m = fromHash ? Math.min(MONTHS - 1, Math.max(0, (+fromHash[1] - START_YEAR) * 12 + (fromHash[2] ? +fromHash[2] - 1 : 11))) : MONTHS - 1;
+  const kv = Object.fromEntries(parts.slice(1).map(p => p.split("=")));
   setMonth(m);
+  if (kv.from && byId.has(kv.from) && kv.to && byId.has(kv.to)) { selA = kv.from; selB = kv.to; updateSelection(); }
 }
 
 function setMonth(m, prevM = null) {
@@ -558,17 +572,27 @@ function setMonth(m, prevM = null) {
   document.getElementById("tl-year").textContent = y;
   document.getElementById("tl-month").textContent = MON[m % 12];
   document.getElementById("tl-note").hidden = m >= MONTHS - 1;
+  updateCoverCount();
+  if (!playing) refreshJourney(); // while playing, re-planning every frame would just flicker
+}
+
+let journeyTimer = 0;
+function refreshJourney() {
+  clearTimeout(journeyTimer);
+  journeyTimer = setTimeout(() => { if (selA && selB && currentMode === "journey") updateSelection(); }, 180);
 }
 
 function applyDate(iso, prevISO) {
   curISO = iso;
   const act = new Map(); // station id -> Set of line ids running on it at this date
+  ACTIVE_LINE_IDS = new Set();
   let km = 0;
   const lines = new Set();
   for (const lk of HIST.links) {
     const on = lk.from <= iso && (lk.to === null || iso < lk.to);
     lk.el.style.display = on ? "" : "none";
     if (!on) continue;
+    ACTIVE_LINE_IDS.add(lk.line);
     for (const id of [lk.a, lk.b]) {
       if (!act.has(id)) act.set(id, new Set());
       act.get(id).add(lk.line);
@@ -683,9 +707,11 @@ function loadRail() {
 }
 
 function stopPlay() {
+  const wasPlaying = playing;
   playing = false;
   cancelAnimationFrame(playRaf);
   document.getElementById("tl-play").textContent = "▶";
+  if (wasPlaying) refreshJourney(); // plan the journey for the date we stopped on
 }
 
 function startPlay() {

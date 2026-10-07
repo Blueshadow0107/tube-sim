@@ -13,14 +13,34 @@ Endpoints:
 
 from flask import Flask, jsonify, render_template, request
 
-from graph import TubeGraph
+from graph import HISTORY, TubeGraph, dated_snapshot
 from solver import ChallengeSolver
 from pathlib import Path
 import json
+import re
 
 app = Flask(__name__)
 graph = TubeGraph()
 solver = ChallengeSolver(graph)
+_history = json.loads(HISTORY.read_text()) if HISTORY.exists() else None
+_networks = {}  # "YYYY-MM" -> (TubeGraph, ChallengeSolver) for that month's last-day network
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+LATEST = "2025-12-31"
+
+
+def network_for(date):
+    """(graph, solver) for the network running on `date`; None / today / no history -> today's snapshot.
+
+    Dates are quantised to their month so the cache stays small (the map's slider moves in months anyway).
+    """
+    if not date or date >= LATEST or _history is None:
+        return graph, solver
+    key = date[:7]
+    if key not in _networks:
+        last_day = f"{key}-31"  # string compare is enough: every link boundary is a real date <= the 31st
+        g = TubeGraph(data=dated_snapshot(graph.data, _history, last_day))
+        _networks[key] = (g, ChallengeSolver(g))
+    return _networks[key]
 RIVER_PATH = Path(__file__).parent / "data" / "thames.json"
 HISTORY_PATH = Path(__file__).parent / "data" / "history.json"
 RAIL_PATH = Path(__file__).parent / "data" / "rail_history.json"
@@ -63,11 +83,18 @@ def river():
 def route():
     a = request.args.get("from")
     b = request.args.get("to")
+    date = request.args.get("date")
+    if date and not DATE_RE.match(date):
+        return jsonify({"error": "date must be YYYY-MM-DD"}), 400
+    g, _ = network_for(date)
     if not a or not b or a not in graph.stations or b not in graph.stations:
         return jsonify({"error": "unknown station id(s)"}), 400
-    result = graph.route(a, b)
+    if a not in g.stations or b not in g.stations:
+        gone = [graph.stations[s]["name"] for s in (a, b) if s not in g.stations]
+        return jsonify({"error": f"{' and '.join(gone)} not open yet on {date}"}), 404
+    result = g.route(a, b)
     if result is None:
-        return jsonify({"error": "no route found"}), 404
+        return jsonify({"error": "no route found on that date"}), 404
     return jsonify(result)
 
 
@@ -79,18 +106,24 @@ def challenge_solve():
     include_modes = body.get("include_modes", [])
     if not isinstance(include_modes, list):
         return jsonify({"error": "include_modes must be a list"}), 400
+    date = body.get("date")
+    if date and not (isinstance(date, str) and DATE_RE.match(date)):
+        return jsonify({"error": "date must be YYYY-MM-DD"}), 400
+    g, s = network_for(date)
     cover = [
         lid
-        for lid, line in graph.lines.items()
+        for lid, line in g.lines.items()
         if line.get("mode") == "tube" or line.get("mode") in include_modes
     ]
+    if not cover:
+        return jsonify({"error": f"no lines running on {date} to cover"}), 400
     try:
         budget = float(body.get("budget_seconds", 8))
     except (TypeError, ValueError):
         return jsonify({"error": "budget_seconds must be a number"}), 400
     budget = min(max(budget, 1.0), 60.0)
     try:
-        result = solver.solve(
+        result = s.solve(
             objective=objective,
             rule=rule,
             budget_seconds=budget,
