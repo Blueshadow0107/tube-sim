@@ -58,3 +58,11 @@ Rebuild the history (Wikidata is rate-limited and sometimes slow, so the fetch r
 ./.venv/bin/python fetch_history.py    # data/wikidata_london_rail.json
 ./.venv/bin/python build_history.py    # data/history.json + data/line_fixes_review.md
 ```
+
+## Data and licence
+
+Powered by TfL Open Data. Contains OS data © Crown copyright and database rights 2016 and Geomni UK Map data © and database rights 2019.
+
+The historical network (1863–2025) is built from Wikidata, which is available under CC0.
+
+The code is released under the [MIT licence](LICENSE); the licence covers the code only, and the data keeps the terms of its sources above.
