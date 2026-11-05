@@ -66,3 +66,12 @@ Powered by TfL Open Data. Contains OS data © Crown copyright and database right
 The historical network (1863–2025) is built from Wikidata, which is available under CC0.
 
 The code is released under the [MIT licence](LICENSE); the licence covers the code only, and the data keeps the terms of its sources above.
+
+## Deploy
+
+Container-ready: `docker build -t tube-sim . && docker run -p 8080:8080 tube-sim` (gunicorn, honours `$PORT`).
+
+- **Render:** New → Blueprint → pick this repo (`render.yaml`). Free tier sleeps when idle.
+- **Fly.io:** `fly launch --copy-config --no-deploy && fly deploy` (`fly.toml`, scales to zero).
+
+The challenge solver is CPU-heavy (~25 s search); a 1-CPU free instance is fine for demos.

@@ -1,0 +1,10 @@
+.git
+.venv
+.claude
+__pycache__
+*.pyc
+logs_server.txt
+data/cache
+data/wikidata_london_rail.json
+data/wikitext_rail.json
+data/history_preview.png
